@@ -88,23 +88,31 @@ In this task, you will connect to the Axway/ReadyTech training environment and l
 
 2. Navigate to `https://axway.instructorled.training`
 
+   ![Training environment access](images/image3.png)
+
 3. Enter the access code provided by your instructor and click *Continue*
 
 4. When logging in for the first time, you will be presented with an access code activation dialog box. Enter your first and last name, check the consent box, and click **OK**.
 
+   ![Access code activation](images/image4.png)
+
 5. Once logged in, you will see the following:
 
-   ![Training environment home screen](images/image1.jpeg)
+   ![Training environment home screen](images/image5.png)
 
 6. Click on *Lab* at the top of the screen. You should see this screen:
 
-   ![Lab screen](images/image2.jpeg)
+   ![Lab screen](images/image6.png)
 
 7. Verify that *ReadyTech View (HTML)* is selected in the *Remote desktop* section. Click on **Connect to the lab** in the Remote desktop section
 
 8. Enter `axway` in the *Login* and *Password* fields of the *Log in* dialog box
 
+   ![Login](images/image7.png)
+
 9. At this point you should have access to your lab server desktop
+
+   ![Lab server desktop](images/image8.png)
 
 > **NOTE:** Click on **Activities** at the top left corner at any time to bring this UI to the front. If there are open applications (such as Firefox, Filezilla and so on), you will see them here as well.
 
@@ -126,7 +134,7 @@ ps -ef | grep Secure
 
 There should be no processes besides the grep process itself:
 
-![No running processes](images/image3.jpeg)
+![No running processes](images/image9.png)
 
 **Uninstall SecureTransport:**
 
@@ -134,14 +142,17 @@ There should be no processes besides the grep process itself:
 cd /opt/Axway/ST
 ./uninstall.sh -m console
 ```
+![Uninstall script](images/image10.png)
 
 Press **Enter** or `y` when prompted.
+
+![Prompt during uninstall](images/image11.png)
 
 > **NOTE:** Some versions of ST may throw a warning about missing SLF4J loggers. These warnings can be safely ignored.
 
 If the summary or the status shows any errors, consult the `install.log` file.
 
-![Uninstall completion screen](images/image4.jpeg)
+![Uninstall completion screen](images/image12.png)
 
 ---
 
@@ -175,9 +186,13 @@ unzip SecureTransport_5.5-20260129_Install_linux-x86-64_BN3237.zip
    ./setup.sh -m console
    ```
 
+   ![Installation](images/image13.png)
+
 2. **Accept the license**
 
    > **NOTE:** The number of pages depends on the resolution and the size of your screen and window.
+
+   ![Accept License](images/image14.png)
 
 3. **Select the Installation Directory of the Installer Product**
 
@@ -186,23 +201,37 @@ unzip SecureTransport_5.5-20260129_Install_linux-x86-64_BN3237.zip
    Type the directory name when prompted: /opt/Axway/ST
    ```
 
+   ![Select Install Dir Prod](images/image15.png)
+
 4. **Select Server or Edge** — select *Server* for this installation
+
+   ![Select Modules](images/image16.png)
 
 5. **Select the Installation Directory for SecureTransport** — choose the Default for the ST installation directory
 
+   ![Select Install Dir ST](images/image17.png)
+
 6. **Select the Database** — select *Embedded Database* for this exercise
 
+   ![Select Database](images/image18.png)
+
 7. **Installation type** — select *Standalone*
+
+   ![Select Install Type](images/image19.png)
 
 8. **Database settings**
 
    > **NOTE:** Password is mandatory and cannot be left as the default value. Select `2` and set the password.
+
+   ![Select DB settings](images/image20.png)
 
 9. **Configuration settings**
 
    Set `Cluster Auto-Register IP/FQDN` to `mft-env` (Select `5` to update the value).
 
    Follow the prompts to start the installation after that.
+
+   ![Configuration settings](images/image21.png)
 
 10. **Validate the admin interface is running:**
 
@@ -211,6 +240,8 @@ unzip SecureTransport_5.5-20260129_Install_linux-x86-64_BN3237.zip
     ```
 
     If you changed the Admin port in step 9, use the port you selected there instead of `8444`.
+
+    ![Configuration settings](images/image23.png)
 
 Your SecureTransport is now installed, and you can proceed with its configuration.
 
@@ -236,6 +267,10 @@ The special *setup* account will walk you through the process – username `setu
 
 > **NOTE:** The UIs may look slightly different if you are installing a different version. The below screenshots are for the September 2025 update of ST.
 
+![Admin UI login](images/image24.png)
+
+![Password reminder ](images/image25.png)
+
 ---
 
 **Install the licenses**
@@ -250,6 +285,7 @@ Licenses can be found in `/home/axway/Installers/ST`
   cp st.license /opt/Axway/ST/SecureTransport/conf
   ```
 
+![Update license ](images/image26.png)
 ---
 
 **Create the Keystore Password**
@@ -258,9 +294,11 @@ Do not enter anything in the "Current password" field.
 
 Ensure that you remember the password you have set! For this exercise, we recommend `Axway123`. However, any password can be used.
 
+![Keystore password](images/image27.png)
+
 On successful update, the server will show you a green notification on the screen and close the secondary window, returning you to the main page:
 
-![Keystore password success notification](images/image5.jpeg)
+![Keystore password success main page](images/image28.png)
 
 ---
 
@@ -272,9 +310,12 @@ Use the name of your VM – `mft-env` – as the common name.
 
 Select **Generate**. The screen refreshes after the certificate is created and displays briefly a green success message, then closes the secondary window and returns you to the previous screen.
 
+![Generate Internal CA](images/image29.png)
+![Generate Internal CA window](images/image30.png)
+
 Your internal CA should now look something like this:
 
-![Internal CA view](images/image6.jpeg)
+![Internal CA view](images/image31.png)
 
 ---
 
