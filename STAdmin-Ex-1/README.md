@@ -327,21 +327,25 @@ First, the `admind` certificate. A temporary admind certificate was created at i
 
 > **NOTE:** Never delete the admind certificate.
 
+![Existing admind certificate](images/image32.png)
+
 Click on **Generate** and select *X.509 Certificate*:
 
-![Generate X.509 certificate screen](images/image7.jpeg)
+![Generate X.509 certificate screen](images/image33.png)
 
 This will open the screen for generating the new certificate:
 
-![New certificate generation screen](images/image8.jpeg)
+![New certificate generation screen](images/image34.png)
 
 You will be asked if you wish to overwrite the existing admind certificate – select **Overwrite**.
 
 > **NOTE:** If you want to preserve the original certificate, export it before you generate the new one.
 
+![New certificate generation screen](images/image35.png)
+
 The screen refreshes after the certificate is created and displays briefly a green success message, then closes the secondary window and returns you to the previous screen which should look like this:
 
-![Certificate list after admind generation](images/image9.jpeg)
+![Certificate list after admind generation](images/image36.png)
 
 Repeat the above steps to generate the following certificates:
 
@@ -355,7 +359,7 @@ Repeat the above steps to generate the following certificates:
 
 The result should be something like this:
 
-![Full certificate list](images/image10.jpeg)
+![Full certificate list](images/image37.png)
 
 ---
 
@@ -365,15 +369,19 @@ Now enable the protocol servers for the protocols we'll be using.
 
 First let's enable HTTPS.
 
+![Server control](images/image38.png)
+
 Select the ellipsis next to the *"Http Default"* server, then select the **Settings** icon:
 
-![HTTP Default server settings icon](images/image11.jpeg)
+![HTTP Default server settings icon](images/image39.png)
 
 This will open the following screen:
 
-![HTTPS configuration screen](images/image12.jpeg)
+![HTTPS configuration screen](images/image40.png)
 
 In the *"SSL Key Alias"* field in the *SSL Settings* section, select the `ssl_server` certificate we generated previously. This is what will be seen by user clients when they connect to the Web Client interface or the User API. Make sure you enable **HTTPS** and **HSTS**. If you enable HTTP, the listener will be started but you will need to do additional changes to allow your server to accept non-secure connections.
+
+![HTTPS configuration screen continued](images/image41.png)
 
 Similarly, enable the SFTP server.
 
@@ -424,9 +432,11 @@ We no longer need the setup account – so login as the normal Master Administra
 
 You will again be forced to change the default admin password. Once you do that, you will see the main dashboard of the server:
 
-![Main dashboard](images/image13.jpeg)
+![Main dashboard](images/image42.png)
 
 Navigate to **Accounts → Administrators**.
+
+![Accounts > Administrators](images/image43.png)
 
 You will see all the default accounts created at installation time.
 
@@ -436,6 +446,8 @@ Delete the **account** and **application** accounts. If you want to explore them
 
 > **NOTE:** Please leave the **dbsetup** account intact. You can change its password if you want to (the current password is **dbsetup**).
 
+![Accounts > Administrators > Setup](images/image45.png)
+
 ---
 
 ### Task 6: Start the Protocol Daemons if they are not running
@@ -444,11 +456,14 @@ As you executed `start_all` earlier in Task 4, the protocol daemons should be al
 
 You can start the HTTPS daemon by clicking the top ellipsis menu next to *"HTTP Service"*.
 
+![Server Control - HTTPS Daemon](images/image46.jpeg)
+![Server Control - HTTPS Start Daemon](images/image47.jpeg)
+
 You can start the SSH daemon in a similar manner.
 
 Your Server Control Panel should now look like this:
 
-![Server Control Panel with daemons running](images/image14.jpeg)
+![Server Control Panel with daemons running](images/image48.jpeg)
 
 ---
 
