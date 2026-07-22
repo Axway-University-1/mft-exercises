@@ -4,5 +4,8 @@ show_downloads: false
 remote_theme: pages-themes/cayman@v0.2.0
 classes: wide
 
+url: "https://axway-university-1.github.io"
+baseurl: "/mft-exercises"
+
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
