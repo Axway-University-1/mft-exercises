@@ -1,18 +1,14 @@
-# SecureTransport Basic Administration
-
+---
+layout: default
+title: SecureTransport Basic Administration
 ---
 
 **Axway University**  
 **SecureTransport Installation – Rocky Linux 9**  
 
-
----
-
 *Copyright © Axway 2026. All Rights Reserved.*
 
----
-
-| Average time required to complete this lab | 60 minutes    |
+| Average time required to complete this lab | 60 minutes |
 | ---- | ---- |
 | Lab last updated | May 2026 |
 | Lab last tested | May 2026 |
@@ -42,7 +38,6 @@ In this exercise, you will be introduced to the SecureTransport environment.
 **Know your own parameters.**
 
 Each course attendee will have their own unique parameters for use within the labs. These will be shared by the instructor during the class.
-
 
 In this task, you will connect to the Axway/ReadyTech training environment and log into your training server.
 
@@ -104,6 +99,7 @@ There should be no processes besides the grep process itself:
 cd /opt/Axway/ST
 ./uninstall.sh -m console
 ```
+
 ![Uninstall script](images/image10.png)
 
 Press **Enter** or `y` when prompted.
@@ -115,6 +111,3 @@ Press **Enter** or `y` when prompted.
 If the summary or the status shows any errors, consult the `install.log` file.
 
 ![Uninstall completion screen](images/image12.png)
-
----
-

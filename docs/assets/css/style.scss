@@ -1,0 +1,27 @@
+---
+---
+
+$header-bg-color: #006580;
+$header-bg-color-secondary: #006580;
+$section-headings-color: #006580;
+$header-heading-color: #fff;
+$body-text-color: #606c71;
+$body-link-color: #1e6bb8;
+$blockquote-text-color: #819198;
+$code-bg-color: #f3f6fa;
+$code-text-color: #567482;
+$border-color: #dce6f0;
+$table-border-color: #e9ebec;
+$hr-border-color: #eff0f1;
+
+@import 'jekyll-theme-cayman';
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content {
+  max-width: 80rem;
+}
