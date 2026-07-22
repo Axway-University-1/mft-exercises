@@ -3,8 +3,8 @@ layout: default
 title: SecureTransport Basic Administration
 ---
 
-**Axway University**  
-**SecureTransport Installation – Rocky Linux 9**  
+#Axway University
+#SecureTransport Installation – Rocky Linux 9##
 
 *Copyright © Axway 2026. All Rights Reserved.*
 
