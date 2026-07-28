@@ -13,18 +13,10 @@ title: SecureTransport Basic Administration
 | Lab last updated | May 2026 |
 | Lab last tested | May 2026 |
 
-Welcome to the APIM Installation Lab! In this hands-on session, we'll ........
+Welcome to the SecureTransport Administration Lab! In this hands-on session, we'll ........
 
 
----
 
-## Table of Contents
-
-
-- [Exercise 4 – Administrator LDAP](#exercise-4--administrator-ldap)
-  - [Task 1: Configure LDAP](#task-1-configure-ldap)
-  - [Task 2: Create a new Administrator](#task-2-create-a-new-administrator)
-  - [Task 3: Login as the new Administrator](#task-3-login-as-the-new-administrator)
 
 ---
 

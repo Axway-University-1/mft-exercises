@@ -13,15 +13,9 @@ title: SecureTransport Basic Administration
 | Lab last updated | May 2026 |
 | Lab last tested | May 2026 |
 
-Welcome to the APIM Installation Lab! In this hands-on session, we'll ........
+Welcome to the SecureTransport Basic Administration Lab! In this hands-on session, we'll ........
 
----
 
-## Table of Contents
-
-- [Exercise 1 – Introduction to the Environment](#exercise-1--introduction-to-the-environment)
-  - [Task 1: Access the Training Environment](#task-1-access-the-training-environment)
-  - [Task 2: Uninstall SecureTransport](#task-2-uninstall-securetransport)
 
 ---
 

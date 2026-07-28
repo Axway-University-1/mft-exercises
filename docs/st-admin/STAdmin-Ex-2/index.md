@@ -14,22 +14,11 @@ title: SecureTransport Basic Administration
 | Lab last updated | May 2026 |
 | Lab last tested | May 2026 |
 
-Welcome to the APIM Installation Lab! In this hands-on session, we'll ........
+Welcome to the SecureTransport Administration Lab! In this hands-on session, we'll ........
 
 
 
----
 
-## Table of Contents
-
-
-- [Exercise 2 – Install SecureTransport](#exercise-2--install-securetransport)
-  - [Task 1: Unzip the Installation Kit](#task-1-unzip-the-installation-kit)
-  - [Task 2: Begin the Core Server Installation](#task-2-begin-the-core-server-installation)
-  - [Task 3: Post Installation Configuration](#task-3-post-installation-configuration)
-  - [Task 4: Restart SecureTransport](#task-4-restart-securetransport)
-  - [Task 5: Disable the Setup Account](#task-5-disable-the-setup-account)
-  - [Task 6: Start the Protocol Daemons if they are not running](#task-6-start-the-protocol-daemons-if-they-are-not-running)
 
 ---
 

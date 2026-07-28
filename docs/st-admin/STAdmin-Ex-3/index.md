@@ -14,18 +14,10 @@ title: SecureTransport Basic Administration
 | Lab last updated | May 2026 |
 | Lab last tested | May 2026 |
 
-Welcome to the APIM Installation Lab! In this hands-on session, we'll ........
+Welcome to the SecureTransport Administration Lab! In this hands-on session, we'll ........
 
 
----
 
-## Table of Contents
-
-
-- [Exercise 3 – Size your JVMs](#exercise-3--size-your-jvms)
-  - [Task 1: Determine Allocations](#task-1-determine-allocations)
-  - [Task 2: STStartScriptsConfig](#task-2-ststartscriptsconfig)
-  - [Task 3: Restart ST](#task-3-restart-st)
 
 ---
 
