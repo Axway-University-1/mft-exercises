@@ -31,11 +31,11 @@ In the prior exercise, we simply uploaded a file to the John account. Now we'll 
 
 1. Connect to the SecureTransport administration UI as the admin
 
-   ![Applications](images/image25.png)
+   ![Applications](./images/image045.png)
 
 2. Navigate to *Application* and click on *Add New*
 
-   ![Add new application](images/image26.png)
+   ![Add new application](./images/image047.png)
 
 3. Select *Basic Application* from the application Type drop down menu
 
@@ -51,13 +51,15 @@ Now, we will add the file transfer flow to the John account. We will still use t
 
 1. Select the John account and click the *Transfer Sites* tab
 
-   ![Transfer sites tab](images/image27.png)
+   ![Transfer sites tab](./images/image049.png)
 
 2. Click on *Add New*
 
-   ![Add new transfer site](images/image28.png)
+3. Change the Transfer Protocol from AS2 to SSH
 
-3. Configure the transfer site:
+   ![Add new transfer site](./images/image051.png)
+
+4. Configure the transfer site:
 
 | Field | Value |
 | --- | --- |
@@ -71,7 +73,10 @@ Now, we will add the file transfer flow to the John account. We will still use t
 
 > **NOTE:** Use your **servername** as part of the upload folder – so if your server is `stockbroker`, make the upload folder `fromStockbroker` (use uppercase for the first letter of your servername).
 
-4. Save your site using the *Add* button.
+5. Save your site using the *Add* button. The result should look like this:
+   ![Add new transfer site](./images/image053.png)
+
+
 
 ---
 
@@ -81,15 +86,15 @@ Now, we will add the file transfer flow to the John account. We will still use t
 
 2. Click the *Test connection* button
 
-   ![Test connection](images/image29.png)
+   ![Test connection](./images/image056.png)
 
 3. Verify that both connectivity AND authentication are correct; resolve any errors if required.
 
-   ![Connectivity result](images/image30.png)
+   ![Connectivity result](./images/image058.png)
 
 4. Check the contents of the remote upload directory by clicking *List*
 
-   ![List directory](images/image31.png)
+   ![List directory](./images/image060.png)
 
 It is probably empty at this time.
 
@@ -99,13 +104,13 @@ It is probably empty at this time.
 
 1. Select the *Subscriptions* tab
 
-   ![Subscriptions tab](images/image32.png)
+   ![Subscriptions tab](./images/image063.png)
 
 2. Select *BasicApp* from the *Subscribe to* dropdown and click *Subscribe…*
 
 3. Change *BasicApp* to something more meaningful – perhaps `toInstructor`
 
-   ![Subscription folder](images/image33.png)
+   ![Subscription folder](./images/image065.png)
 
 4. Scroll down to the *For Files Sent to this Account…* section (the outbound settings)
 
@@ -113,11 +118,11 @@ It is probably empty at this time.
 
 6. Check the *on Success Delete* option
 
-   ![Outbound settings](images/image34.png)
+   ![Outbound settings](./images/image067.png)
 
 7. Save the subscription via *Add*
 
-   ![Save subscription](images/image35.png)
+   ![Save subscription](./images/image069.png)
 
 ---
 
@@ -139,21 +144,21 @@ Any files received in the `toInstructor` folder will be transmitted to the remot
 
 7. Upload a file (any file will do)
 
-   ![Upload to folder](images/image36.png)
+   ![Upload to folder](./images/image071.png)
 
 Note that on success, the file is no longer visible in the upload folder.
 
 8. Click on the *Uploads monitor* button – you will see your file transfer
 
-   ![Uploads monitor](images/image37.png)
+   ![Uploads monitor](./images/image073.png)
 
 9. Login to the admin GUI and check the File Tracking
 
-   ![File tracking](images/image38.png)
+   ![File tracking](./images/image075.png)
 
 10. Open the Instructor Transfer Site attached to the John account and select *List* on the upload folder (fromStockbroker)
 
-    ![List upload folder](images/image39.png)
+    ![List upload folder](./images/image077.png)
 
 ---
 

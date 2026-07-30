@@ -38,7 +38,7 @@ We'll introduce you to the training environment and then get you started by crea
 
 2. Navigate to the admin GUI at `https://mft-env:8444`
 
-   ![SecureTransport admin login](images/image13.png)
+   ![SecureTransport admin login](./images/image017.png)
 
 3. In the *User ID* and *Password* fields enter `admin`
 
@@ -56,7 +56,11 @@ In this task, you will shrink and expand the left-hand navigational menu icons t
 
 2. Click on the **<** symbol at the bottom of the left-hand navigational menu
 
-   ![Navigation menu collapsed](images/image14.png)
+   ![Navigation menu collapsed](./images/image019.png)
+
+3. This will result in the shrinking of the left-hand navigational menu as follows.
+
+   ![Menu collapsed](./images/image021.png)
 
 Hovering over any of the menus while they are not expanded will show you a tooltip with the name of the menu.
 
@@ -98,11 +102,12 @@ Add the following attributes (click *Add Attribute* for each, then click the che
 
 3. Click *New Account*
 
-   ![New account](images/image15.png)
 
 4. Enter the information from the table above into the appropriate fields
 
-   ![Account attributes](images/image16.png)
+   ![Account attributes](./images/image023.png)
+
+   ![Account attributes continued](./images/image025.png)
 
 5. Click *Save* (make sure you save each additional attribute separately by clicking the checkmark next to the attribute)
 
@@ -118,15 +123,17 @@ Add the following attributes (click *Add Attribute* for each, then click the che
 
 3. Enter `John` in the *Search* field
 
-   ![Search account](images/image17.png)
+   (We realise this is unnecessary in our lab as this is the first account on the system. However, we are showing you how to find your account when you may have thousands of accounts built)
+
+   ![Search account](./images/image029.png)
 
 4. Click *Search*. You should see the following:
 
-   ![Search results](images/image18.png)
+   ![Search results](./images/image031.png)
 
 5. Click on *John* in the *Account Name* field to open the account summary
 
-   ![Account summary](images/image19.png)
+   ![Search results](./images/image033.png)
 
 6. Click *Edit Account Settings* to open the account in edit mode
 
@@ -140,7 +147,7 @@ Add the following attributes (click *Add Attribute* for each, then click the che
 
 9. Click *Save* and *Close*. You should now see the note in the account Notes field.
 
-   ![Account notes](images/image20.png)
+   ![Account notes](./images/image035.png)
 
 ---
 
@@ -160,11 +167,11 @@ In this task, you will connect to your SecureTransport server as the user John, 
 
 6. Click *Upload* and select a file to upload (any file will do)
 
-   ![Upload file](images/image21.png)
+   ![Upload file](./images/image037.png)
 
 7. Click *Open* on your selected file. The file should be successfully uploaded to your home folder.
 
-   ![File uploaded](images/image22.png)
+   ![File uploaded](./images/image039.png)
 
 8. Click on the drop-down arrow next to John's name in the upper right-hand corner
 
@@ -182,11 +189,11 @@ In this task, you will use SecureTransport's file tracking log to verify your fi
 
 3. Verify you see an entry for the file you just uploaded
 
-   ![File tracking](images/image23.png)
+   ![File tracking](./images/image041.png)
 
 The green *Processed* icon indicates the file transfer was successful. Clicking on the filename will bring up detailed log information about the transfer.
 
-   ![File tracking detail](images/image24.png)
+   ![File tracking detail](./images/image043.png)
 
 The file we just uploaded was placed in the user's home directory. In the next exercise, we will create an outbound flow which processes the received file.
 
