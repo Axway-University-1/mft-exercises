@@ -383,6 +383,14 @@ nav {
 }
 
 /* =========================================================
+   Hamburger toggle — hidden on wide viewports,
+   visible below 1400px to open/close the nav drawer
+   ========================================================= */
+.nav-toggle {
+  display: none;             /* hidden on desktop */
+}
+
+/* =========================================================
    Footer
    ========================================================= */
 footer {
@@ -399,7 +407,8 @@ footer {
 }
 
 /* =========================================================
-   Responsive
+   Responsive — medium (≤ 1400 px)
+   Nav becomes a slide-in drawer instead of disappearing
    ========================================================= */
 @media print, screen and (max-width: 1400px) {
   div.wrapper {
@@ -407,8 +416,80 @@ footer {
     margin: 0;
   }
 
+  /* --- hamburger button --- */
+  .nav-toggle {
+    display: block;
+    position: fixed;
+    top: 145px;              /* just below the header + banner area */
+    left: 14px;
+    z-index: 200;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background: $teal;
+    color: #fff;
+    font-size: 24px;
+    line-height: 42px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    transition: background 0.2s;
+
+    &:hover,
+    &:focus {
+      background: $teal-dark;
+      outline: none;
+    }
+  }
+
+  /* --- nav drawer (off-screen by default) --- */
   nav {
+    display: block !important;   /* override any inherited display:none */
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    max-height: 100vh;
+    padding: 190px 20px 30px 20px;   /* clear the fixed header */
+    background: $paper;
+    border-right: 1px solid #cbcbcb;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, .15);
+    z-index: 150;
+    overflow-y: auto;
+    transform: translateX(-100%);     /* hidden off-screen */
+    transition: transform 0.25s ease;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+
+  /* when open */
+  nav.nav-open {
+    transform: translateX(0);
+  }
+
+  /* overlay behind the drawer to catch outside clicks */
+  .nav-overlay {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 140;
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  .nav-overlay.nav-open {
+    display: block;
   }
 
   header, section, footer {
@@ -450,6 +531,9 @@ footer {
   }
 }
 
+/* =========================================================
+   Responsive — small tablet (≤ 720 px)
+   ========================================================= */
 @media print, screen and (max-width: 720px) {
   body {
     word-wrap: break-word;
@@ -466,6 +550,14 @@ footer {
     p {
       display: none;
     }
+  }
+
+  .nav-toggle {
+    top: 75px;               /* header is shorter at this breakpoint */
+  }
+
+  nav {
+    padding-top: 120px;      /* less header clearance needed */
   }
 
   #banner {
@@ -492,6 +584,9 @@ footer {
   }
 }
 
+/* =========================================================
+   Responsive — phone (≤ 480 px)
+   ========================================================= */
 @media print, screen and (max-width: 480px) {
   header {
     position: relative;
@@ -507,6 +602,16 @@ footer {
     }
   }
 
+  .nav-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+
+  nav {
+    padding-top: 60px;
+  }
+
   #banner {
     display: none;
   }
@@ -516,6 +621,9 @@ footer {
   }
 }
 
+/* =========================================================
+   Responsive — short viewports
+   ========================================================= */
 @media print, screen and (max-height: 680px) {
   footer {
     text-align: center;
@@ -529,7 +637,7 @@ footer {
 
 @media print, screen and (max-height: 480px) {
   nav {
-    display: none;
+    padding-top: 60px;
   }
 }
 
@@ -538,5 +646,10 @@ footer {
     padding: 0.4in;
     font-size: 12pt;
     color: #444;
+  }
+
+  .nav-toggle,
+  .nav-overlay {
+    display: none !important;
   }
 }

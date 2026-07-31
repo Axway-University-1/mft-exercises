@@ -38,6 +38,11 @@
         {% endif %}
   </div><!-- end banner -->
 
+    <!-- ✚ Hamburger toggle (CSS hides it on wide viewports) -->
+    <button class="nav-toggle" aria-label="Toggle table of contents" aria-expanded="false">&#9776;</button>
+    <!-- ✚ Overlay behind the drawer -->
+    <div class="nav-overlay"></div>
+
     <div class="wrapper">
       <nav>
         <ul></ul>
@@ -64,5 +69,40 @@
       </div>
       <script src="{{ '/assets/js/image-lightbox.js' | relative_url }}"></script>
     </div>
+
+    <!-- ✚ Hamburger nav toggle script -->
+    <script>
+    (function () {
+      var btn     = document.querySelector('.nav-toggle');
+      var nav     = document.querySelector('nav');
+      var overlay = document.querySelector('.nav-overlay');
+      if (!btn || !nav) return;
+
+      function open()  {
+        nav.classList.add('nav-open');
+        overlay.classList.add('nav-open');
+        btn.setAttribute('aria-expanded', 'true');
+        btn.innerHTML = '&times;';
+      }
+      function close() {
+        nav.classList.remove('nav-open');
+        overlay.classList.remove('nav-open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = '&#9776;';
+      }
+
+      btn.addEventListener('click', function () {
+        nav.classList.contains('nav-open') ? close() : open();
+      });
+      overlay.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) close();
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') close();
+      });
+    })();
+    </script>
+
   </body>
 </html>
