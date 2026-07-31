@@ -453,6 +453,8 @@ footer {
     bottom: 0;
     width: 260px;
     max-height: 100vh;
+    margin-left: 0;              /* reset theme's -580px */
+    text-align: left;            /* reset theme's right alignment */
     padding: 190px 20px 30px 20px;   /* clear the fixed header */
     background: $paper;
     border-right: 1px solid #cbcbcb;
