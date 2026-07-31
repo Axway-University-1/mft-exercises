@@ -1,91 +1,92 @@
 ---
 ---
 
-
 @import "{{ site.theme }}";
 
+/* =========================================================
+   Palette — single source of truth for the site's colors
+   ========================================================= */
+$teal:        #006580;   // primary brand color (headings, links, borders)
+$teal-dark:   #004b5f;   // darker teal (shadows, hovers)
+$cyan:        #00A0CC;   // inline code / syntax keys
+$cream:       #F3ECE3;   // page background
+$paper:       #fbfbfb;   // section background
+$ink:         #2b2b2b;   // body text
+$code-bg:     #D9D8D6;   // inline code background
+$pre-bg:      #22272B;   // code block background
 
+/* =========================================================
+   Base typography
+   ========================================================= */
 body {
-  font:18px/22px 'Roboto', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  
-  color:#2b2b2b; 
+  font: 18px/22px 'Roboto', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $ink;
   font-weight: normal;
-  margin: 0px;
-  padding:0px 0 20px 0px;
-  background: #F3ECE3;
-}
-h1, h2, h3, h4, h5, h6 { 
-  color: #006580;
-  margin:2rem  0 2rem;
-  font-weight: normal;
-  line-height:1.5;
+  margin: 0;
+  padding: 0 0 20px 0;
+  background: $cream;
 }
 
-
-p, ul, ol, table, dl {
-  margin:0 0 20px;
-  line-height:1.5;
+h1, h2, h3, h4, h5, h6 {
+  color: $teal;
+  margin: 2rem 0;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 h1, h2, h3 {
-
-  line-height:1.2;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size:36px;
-  margin:0  0 2rem;
+  font-size: 36px;
+  margin: 0 0 2rem;
 }
 
 h2 {
   font-size: 26px;
 }
-/**
-h3, h4, h5, h6 {
-  color:#666666;
+
+p, ul, ol, table, dl {
+  margin: 0 0 20px;
+  line-height: 1.5;
 }
 
-h3 {
-  font-size: 18px;
-  line-height: 24px;
-}
-**/
 a {
-  color:#006580;
-  font-weight:400;
-  text-decoration:underline;
+  color: $teal;
+  font-weight: 400;
+  text-decoration: underline;
+
   strong {
-    color: #006580;
+    color: $teal;
   }
 }
-/**
-a small {
-  font-size:11px;
-  color:#666;
-  margin-top:-0.6em;
-  display:block;
-}
-**/
-ul{
-      list-style-type: disc;
-      list-style-image: none;
-}
-/**
-strong {
-  font-weight: bold;
-  color: #333;
+
+ul {
+  list-style-type: disc;
+  list-style-image: none;
 }
 
-.wrapper {
-  width:650px;
-  margin:0 auto;
-  position:relative;
+blockquote {
+  border-left: 1px solid $teal;
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-style: italic;
+
+  code {
+    font-style: normal;
+  }
 }
-**/
+
+/* =========================================================
+   Images + lightbox modal
+   (requires the accompanying modal JS include)
+   ========================================================= */
 section img {
   max-width: 100%;
   cursor: pointer;
 }
+
 .modal {
   display: none;
   position: fixed;
@@ -114,192 +115,171 @@ section img {
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
-}
 
-.modal-close:hover,
-.modal-close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-blockquote {
-  border-left:1px solid #006580;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
-  code {
-    font-style: normal; 
+  &:hover,
+  &:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 
+/* =========================================================
+   Code
+   ========================================================= */
 code {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 16px;
-    color: #00A0CC;
-    text-shadow: none;
-    margin: 0 2px;
-    padding: 2px 6px;
-    background: #D9D8D6;
-    border-radius: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  color: $cyan;
+  text-shadow: none;
+  margin: 0 2px;
+  padding: 2px 6px;
+  background: $code-bg;
+  border-radius: 10px;
 }
+
 .highlight code {
-    .p   {    color: #d0d0d0;   } //punctuations
-    .nl  {    color: #00A0CC;   } //keys
-    .s2  {    color: #d22630;   } //string value
-    .mf  {    color: #ff7200;   } //float value
-    .mi  {    color: #ff7200;   } //int value
-    .kc  {    color: #9581ff;   } //bollean value
-    .err {    color: #d22630; background-color: transparent; }
+  .p   { color: #d0d0d0; }  // punctuation
+  .nl  { color: $cyan;   }  // keys
+  .s2  { color: #d22630; }  // string value
+  .mf  { color: #ff7200; }  // float value
+  .mi  { color: #ff7200; }  // int value
+  .kc  { color: #9581ff; }  // boolean value
+  .err { color: #d22630; background-color: transparent; }
 }
 
 pre {
-  padding:8px 15px;
-  background: #22272B;
-  border-radius: 3px;
-  border:1px solid #c7c7c7;
-
   position: relative;
   padding: 1rem;
+  background: $pre-bg;
   border: 1px solid #ddd;
-  line-height:1;
+  border-radius: 3px;
+  line-height: 1;
+
   code {
     background-color: transparent;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-size: 13px;
   }
-} 
+}
+
+/* "Copy" button — visual only; the click handler lives in JS.
+   If no JS is wired up for it, delete this block. */
 pre::before {
   content: "Copy";
   position: absolute;
   top: 10px;
   right: 10px;
   padding: 5px 10px;
-  background-color: #006580;
+  background-color: $teal;
   color: white;
   cursor: pointer;
   border-radius: 5px;
   font-size: 0.9rem;
 }
 
-/**
-
-kbd {
-  background-color: #fafbfc;
-  border: 1px solid #c6cbd1;
-  border-bottom-color: #959da5;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #959da5;
-  color: #444d56;
-  display: inline-block;
-  font-size: 11px;
-  line-height: 10px;
-  padding: 3px 5px;
-  vertical-align: middle;
-}
-
+/* =========================================================
+   Tables (workbook version blocks, field/value tables)
+   ========================================================= */
 table {
-  width:100%;
-  border-collapse:collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
-  color: #444;
-}
-**/
-td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
-  border-right: 1px solid #006580;
+  text-align: left;
+  padding: 5px 10px;
+  color: $teal;
+  background: rgba($teal, 0.06);
+  border-bottom: 1px solid $teal;
+  border-right: 1px solid $teal;
 
   &:first-child {
-    border-left: 1px solid #006580;
+    border-left: 1px solid $teal;
   }
 }
-/**
-hr {
-  border: 0;
-  outline: none;
-  height: 11px;
-  background: transparent url('../images/hr.gif') center center repeat-x;
-  margin: 0 0 20px;
+
+td {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid $teal;
+
+  &:first-child {
+    border-left: 1px solid $teal;
+  }
 }
 
-dt {
-  color:#444;
-  font-weight:700;
-}
-**/
+/* =========================================================
+   Fixed page header
+   ========================================================= */
 header {
   padding: 25px 20px 40px 20px;
   margin: 0;
   position: fixed;
   top: 0;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
   width: 100%;
   text-align: center;
-  background: #006580;
-  box-shadow: 1px 0px 2px rgba(0,0,0,.75);
-  z-index:99;
-  -webkit-font-smoothing:antialiased;
+  background: $teal;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, .75);
+  z-index: 99;
+  -webkit-font-smoothing: antialiased;
   min-height: 76px;
 
   h1 {
     font: 40px/48px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #f3f3f3;
-    text-shadow: 0px 2px 0px #235796;
-    margin: 0px;
+    text-shadow: 0 2px 0 $teal-dark;
+    margin: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    -ms-text-overflow: ellipsis;
   }
 
   p {
     color: #d8d8d8;
-    text-shadow:rgba(#000, 0.2) 0 1px 0;
+    text-shadow: rgba(#000, 0.2) 0 1px 0;
     font-size: 18px;
-    margin: 0px;
+    margin: 0;
   }
 }
 
+/* =========================================================
+   Banner (logo + action buttons)
+   ========================================================= */
 #banner {
-   z-index: 100;
-    left: 100%;
-    right: unset;
-    height: 50px;
-    margin-right: unset;
-    margin-left: -70px;
+  z-index: 100;
   position: fixed;
- top: 70px;
+  top: 70px;
+  left: 100%;
+  right: unset;
+  height: 50px;
+  margin-left: -70px;
+  margin-right: unset;
   background: transparent;
   border: none;
   box-shadow: none;
-  border-radius: 0px 2px 2px 0px;
+  border-radius: 0 2px 2px 0;
   padding-right: 10px;
 
   .button {
     border: 1px solid #dba500;
     background: linear-gradient(rgb(255, 231, 136), rgb(255, 206, 56));
-    border-radius: 2px;
-    box-shadow: inset 0px 1px 0px rgba(255,255,255,.4), 0px 1px 1px rgba(0,0,0,.1);
     background-color: #FFE788;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), 0 1px 1px rgba(0, 0, 0, .1);
     margin-left: 5px;
-    padding: 10px 12px;
     margin-top: 6px;
-    line-height:14px;
-    font-size:14px;
-    color:#333;
+    padding: 10px 12px;
+    line-height: 14px;
+    font-size: 14px;
+    color: #333;
     font-weight: bold;
-    display:inline-block;
-    text-align:center;
+    display: inline-block;
+    text-align: center;
 
     &:hover {
       background: linear-gradient(rgb(255, 231, 136), rgb(255, 231, 136));
@@ -307,40 +287,41 @@ header {
     }
   }
 
+  /* Centered against the 800px content column (50% − 400px) */
   .fork {
-    position:fixed;
-    left:50%;
-    margin-left:-325px;
-    padding: 10px 12px;
+    position: fixed;
+    left: 50%;
+    margin-left: -400px;
     margin-top: 6px;
-    line-height:14px;
-    font-size:14px;
+    padding: 10px 12px;
+    line-height: 14px;
+    font-size: 14px;
     background-color: #FFE788;
   }
 
   .downloads {
     float: right;
-    margin:0 45px 0 0;
+    margin: 0 45px 0 0;
 
     span {
-      float:left;
-      line-height:52px;
-      font-size:90%;
-      color:#9d7f0d;
-      text-transform:uppercase;
-      text-shadow:rgba(#fff, 0.2) 0 1px 0;
+      float: left;
+      line-height: 52px;
+      font-size: 90%;
+      color: #9d7f0d;
+      text-transform: uppercase;
+      text-shadow: rgba(#fff, 0.2) 0 1px 0;
     }
   }
 
   ul {
-    list-style:none;
-    height:40px;
-    padding:0;
+    list-style: none;
+    height: 40px;
+    padding: 0;
     float: left;
-    margin-left:10px;
+    margin-left: 10px;
 
     li {
-      display:inline;
+      display: inline;
 
       a.button {
         background-color: #FFE788;
@@ -349,137 +330,103 @@ header {
   }
 
   #logo {
-    position:absolute;
+    position: absolute;
     height: 100px;
     width: 100px;
-    right:7px;
-    top:7px;
+    right: 7px;
+    top: 7px;
     display: block;
-    background-image: none ;
+    background-image: none;
     border-radius: 3px;
     border: 1px solid #cbcbcb;
+
     img {
-       width: 100px;
-        height: 100px;
+      width: 100px;
+      height: 100px;
     }
   }
 }
 
+/* =========================================================
+   Main content
+   ========================================================= */
 section {
   width: 800px;
+  margin: 190px auto 20px;   /* clears the fixed header */
   padding: 30px 30px 50px 30px;
-  margin: 20px 0;
-  margin-top: 190px;
-  position:relative;
-  background: #fbfbfb;
+  position: relative;
+  background: $paper;
   border-radius: 3px;
   border: 1px solid #cbcbcb;
-  box-shadow: 0px 1px 2px rgba(0,0,0,.09), inset 0px 0px 2px 2px rgba(255,255,255,.5), inset 0 0 5px 5px rgba(255,255,255,.4);
-}
-/**
-small {
-  font-size:12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .09),
+              inset 0 0 2px 2px rgba(255, 255, 255, .5),
+              inset 0 0 5px 5px rgba(255, 255, 255, .4);
 }
 
+/* =========================================================
+   Side navigation (theme-generated TOC)
+   ========================================================= */
 nav {
-  width: 230px;
-  position: fixed;
-  top: 220px;
-  left:50%;
-  margin-left:-580px;
-  text-align: right;
+  max-height: calc(100vh - 260px);   /* high-DPI / Windows scaling fix */
+  overflow-y: auto;
+  overflow-x: hidden;
 
-  ul {
-    list-style: none;
-    list-style-image:none;
-    font-size: 14px;
-    line-height:24px;
-
-    li {
-      padding: 5px 0px;
-      line-height: 16px;
-      // padding-right:17px;
-      // position:relative;
-      // right:-12px;
-
-      &.tag-h1 {
-        font-size: 1.2em;
-
-        a {
-          font-weight: bold;
-          color: #333;
-        }
-
-        + .tag-h2 {
-
-        }
-      }
-
-      &.tag-h2 {
-
-        + .tag-h1 {
-          margin-top:10px;
-        }
-      }
-    }
+  ul li {
+    margin-bottom: 10px;
+    line-height: 1.4;
 
     a {
-      color: #666;
-
-      &:hover { color: #999; }
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
-
-    // .active {
-    //   border-right:solid 4px #39C;
-    //   padding-right:13px;
-    // }
   }
 }
-**/
+
+/* =========================================================
+   Footer
+   ========================================================= */
 footer {
-  width:180px;
+  width: 180px;
   position: fixed;
-  left:50%;
-  margin-left:-530px;
-  bottom:20px;
+  left: 50%;
+  margin-left: -530px;
+  bottom: 20px;
   text-align: right;
   line-height: 16px;
-  font-size: 14px ;
-  
+  font-size: 14px;
+  background: $cream;
+  z-index: 1;
 }
 
-@media print, screen and (max-width: 1090px) {
-
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media print, screen and (max-width: 1400px) {
   div.wrapper {
-    width:auto;
-    margin:0;
+    width: auto;
+    margin: 0;
   }
 
-  nav{
+  nav {
     display: none;
   }
 
   header, section, footer {
-    float:none;
+    float: none;
+  }
 
-    h1 {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -o-text-overflow: ellipsis;
-      -ms-text-overflow: ellipsis;
-    }
+  header h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   #banner {
     width: 100%;
-    left: 0px;
+    left: 0;
 
     .downloads {
-        margin-right: 60px;
-      }
-
-    .fork {
+      margin-right: 60px;
     }
 
     #logo {
@@ -493,35 +440,32 @@ footer {
     width: auto;
   }
 
-  footer{
+  footer {
     text-align: center;
     margin: 20px auto;
     position: relative;
-    left:auto;
-    bottom:auto;
-    width:auto;
-    }
+    left: auto;
+    bottom: auto;
+    width: auto;
+  }
 }
-/**
+
 @media print, screen and (max-width: 720px) {
   body {
-    word-wrap:break-word;
+    word-wrap: break-word;
   }
 
   header {
-    padding:20px 20px;
+    padding: 20px;
     margin: 0;
 
     h1 {
       font-size: 32px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -o-text-overflow: ellipsis;
-      -ms-text-overflow: ellipsis;
     }
 
-    p { display: none;}
+    p {
+      display: none;
+    }
   }
 
   #banner {
@@ -530,69 +474,56 @@ footer {
     .fork {
       float: left;
       display: inline-block;
-      margin-left: 0px;
-    position:fixed;
-    left:20px;
-
-      }
+      position: fixed;
+      left: 20px;
+      margin-left: 0;
+    }
   }
 
   section {
     margin-top: 130px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     width: auto;
   }
 
-  header ul, header p.view {
-    position:static;
+  header ul,
+  header p.view {
+    position: static;
   }
 }
 
 @media print, screen and (max-width: 480px) {
-  body {
-  }
-
-  header{
+  header {
     position: relative;
-    padding: 5px 0px;
-    min-height: 0px;
+    padding: 5px 0;
+    min-height: 0;
 
     h1 {
       font-size: 24px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -o-text-overflow: ellipsis;
-      -ms-text-overflow: ellipsis;
+    }
+
+    ul {
+      display: none;
     }
   }
+
+  #banner {
+    display: none;
+  }
+
   section {
     margin-top: 5px;
-  }
-
-  #banner { display: none;}
-  header ul {
-    display:none;
-  }
-}
-
-@media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
   }
 }
 
 @media print, screen and (max-height: 680px) {
-
   footer {
     text-align: center;
     margin: 20px auto;
     position: relative;
-    left:auto;
-    bottom:auto;
-    width:auto;
+    left: auto;
+    bottom: auto;
+    width: auto;
   }
 }
 
@@ -600,13 +531,12 @@ footer {
   nav {
     display: none;
   }
+}
 
-  footer {
-    text-align: center;
-    margin: 20px auto;
-    position: relative;
-    left:auto;
-    bottom:auto;
-    width:auto;
+@media print {
+  body {
+    padding: 0.4in;
+    font-size: 12pt;
+    color: #444;
   }
-}**/
+}
