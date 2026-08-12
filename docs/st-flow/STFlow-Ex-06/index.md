@@ -69,7 +69,7 @@ Create a shareable transfer site with connectivity to the Instructor server that
 | Upload Folder | fromStockbroker (substitute your own node name) |
 | Access Level | Public |
 
-   ![Public transfer site](images/image54.png)
+   ![Public transfer site](../images/image107.png)
 
 ---
 
@@ -77,7 +77,7 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
 1. Navigate to **Routes → Route Templates** and click *+ Route Template*
 
-   ![Route template](images/image55.png)
+   ![Route template](../images/image109.png)
 
 2. Create a new Route Template called `To Instructor`
 
@@ -85,7 +85,7 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
 4. Name: `SR_toInstructor` (leave all other fields at their default values)
 
-   ![Simple route](images/image56.png)
+   ![Simple route](../images/image111.png)
 
 5. Click *+ Step* to add a Rename step
 
@@ -99,7 +99,7 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
    This expression removes the extension from the filename and replaces it with an underscore followed by the current time. For example, `st.txt` becomes `st_2025-Oct-21_13-41`.
 
-   ![Rename step](images/image57.png)
+   ![Rename step](../images/image113.png)
 
 8. Press *Save Draft*
 
@@ -113,7 +113,7 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
 12. Select the *TS_SFTP_Instructor* transfer site in *Account's Transfer Sites*
 
-    ![Send to partner step](images/image58.png)
+    ![Send to partner step](../images/image115.png)
 
 13. Click *Save Draft* to save the step
 
@@ -129,7 +129,7 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
 3. Select *Advanced Routing* from the dropdown
 
-   ![Advanced routing application](images/image59.png)
+   ![Advanced routing application](../images/image117.png)
 
 4. Click *Create Application*
 
@@ -145,7 +145,7 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
 3. Use the dropdown to select the *To Instructor* Route Template and click *+ Assign Route*
 
-   ![Assign route](images/image60.png)
+   ![Assign route](../images/image119.png)
 
 4. Enter `PR To Instructor` as the Route Name
 
@@ -153,15 +153,15 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
 6. Click on the *Subscriptions* tab and create a new Advanced Routing Subscription by selecting *AdvRouting* and *Subscribe…*
 
-   ![Advanced routing subscription](images/image61.png)
+   ![Advanced routing subscription](../images/image121.png)
 
 7. Change the Subscription Folder name to `/toInstructor` and select the Route *PR To Instructor* from the Route dropdown
 
-   ![Subscription route](images/image62.png)
+   ![Subscription route](../images/image123.png)
 
 8. Check the *On Success → Delete* option in Post Routing Settings
 
-   ![Post routing settings](images/image63.png)
+   ![Post routing settings](../images/image125.png)
 
 9. Save your subscription by clicking *Add*
 
@@ -173,10 +173,10 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
 2. Validate that you received the file and that its filename was transformed on transmission
 
-   ![Received file](images/image64.png)
+   ![Received file](../images/image127.png)
 
 3. Verify that all route steps were successful by clicking on the filename of the inbound file
-
-   ![Route steps success](images/image65.png)
+   ![Transfer details](../images/image131.png)
+   ![Route steps success](../images/image129.png)
 
 ---

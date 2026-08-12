@@ -38,7 +38,7 @@ Now we'll examine the use case whereby SecureTransport will initiate the connect
 
 2. Uncheck the *Allow this account to login to SecureTransport Server* checkbox
 
-   ![Disable login](images/image40.png)
+   ![Disable login](../images/image079.png)
 
 3. Click *Save*
 
@@ -52,7 +52,7 @@ Now we'll examine the use case whereby SecureTransport will initiate the connect
 
 3. Add a file Download pattern of `*.ex4`
 
-   ![Download pattern](images/image41.png)
+   ![Download pattern](../images/image081.png)
 
 4. Click *Save*
 
@@ -72,7 +72,7 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 5. The download pattern should be *nothing* or a string that never matches a filename (we do not wish to use the folder monitor for pulling any files)
 
-   ![Folder Monitor site](images/image42.png)
+   ![Folder Monitor site](../images/image083.png)
 
 6. Enter `/tmp` in the upload directory
 
@@ -90,7 +90,7 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 4. Select the *Automatically retrieve files from* box and highlight the Instructor transfer site
 
-   ![Automatic retrieval](images/image43.png)
+   ![Automatic retrieval](../images/image085.png)
 
 5. Select *Configure* under the *Schedule* area
 
@@ -98,7 +98,7 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 7. Enter `30 minutes` for the schedule
 
-   ![Schedule configuration](images/image44.png)
+   ![Schedule configuration](../images/image087.png)
 
 > **NOTE:** If you select *Start now*, the scheduler will execute soon after you save the site. If you do not want that, set the start time in the future.
 
@@ -106,15 +106,15 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 9. Enter `5 days` in the *Keep Pull history* box
 
-   ![Keep pull history](images/image45.png)
+   ![Keep pull history](../images/image089.png)
 
 10. Select *FM_TMP* as the destination for your files and select *Delete on Success* at the bottom of the screen
 
-    ![Destination selection](images/image46.png)
+    ![Destination selection](../images/image091.png)
 
 11. Save your subscription. You should now have two subscriptions in your account.
 
-    ![Two subscriptions](images/image47.png)
+    ![Two subscriptions](../images/image093.png)
 
 ---
 
@@ -124,7 +124,7 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 2. Click the *Retrieve Files Now* button to manually trigger the pull
 
-   ![Retrieve files now](images/image48.png)
+   ![Retrieve files now](../images/image095.png)
 
 ---
 
@@ -132,7 +132,7 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 1. Check the File Tracker
 
-   ![File tracker](images/image49.png)
+   ![File tracker](../images/image097.png)
 
 If you see any issues or there are no file transfers, check the Server Log and use the transfer site's *List* and *Connectivity* options to troubleshoot.
 
@@ -144,11 +144,11 @@ If you see any issues or there are no file transfers, check the Server Log and u
 
    Why are no files being pulled this time? Check the Server Log.
 
-   ![Server log](images/image50.png)
+   ![Server log](../images/image100.jpg)
 
 2. On the *Subscription* tab of the John account, select the subscription by checking the checkbox in front of it, check the *Clear Pull History* option, and then click *Execute*
 
-   ![Clear pull history](images/image51.png)
+   ![Clear pull history](../images/image101.png)
 
 3. Confirm that you can pull the same file again now.
 

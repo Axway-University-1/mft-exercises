@@ -44,7 +44,7 @@ In this exercise, you will create a shared folder application that will allow tw
 
 3. Enter the information from the table above
 
-   ![Shared folder application](images/image52.png)
+   ![Shared folder application](../images/image103.png)
 
 4. Click *Create Application*
 
@@ -124,6 +124,6 @@ Create two accounts and subscribe them to the shared folder application.
 
 11. Verify the file was downloaded. Your tracking table should look something like this:
 
-    ![Shared folder tracking](images/image53.png)
+    ![Shared folder tracking](../images/image105.png)
 
 ---
