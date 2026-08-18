@@ -34,21 +34,21 @@ In this exercise, we'll use the System to Human transfer site. An ST user wishes
 
 1. Verify the SMTP settings in **Server Configuration → SMTP Group** are active
 
-   ![SMTP settings](images/image129.png)
+   ![SMTP settings](../images/image230_1.png)
 
 2. Check that your **Setup → Adhoc** settings are correct
 
-   ![Adhoc settings](images/image130.png)
+   ![Adhoc settings](../images/image230.png)
 
 > **NOTE:** In the *Default Enrollment Type*, select all but *Enroll Licensed*.
 
 3. Check your private network zone has the correct public URL setting
 
-   ![Network zone setting](images/image131.png)
+   ![Network zone setting](../images/image231.png)
 
 4. Also check that the Network zone is defined as the default
 
-   ![Default network zone](images/image132.png)
+   ![Default network zone](../images/image232.png)
 
 ---
 
@@ -66,7 +66,7 @@ In this exercise, we'll use the System to Human transfer site. An ST user wishes
 
 3. The *Send As an attachment* option has a size limit. If unchecked, the recipient will receive an anonymous download link.
 
-   ![System to Human transfer site](images/image133.png)
+   ![System to Human transfer site](../images/image233.png)
 
 ---
 
@@ -88,7 +88,7 @@ In this exercise, we'll use the System to Human transfer site. An ST user wishes
 
 1. Notice that your file has been moved to the anonymous account as a package
 
-   ![File tracking adhoc](images/image134.png)
+   ![File tracking adhoc](../images/image234.png)
 
 > As the email belongs to an existing account, the message was also delivered to that account.
 
@@ -102,7 +102,7 @@ In this exercise, we'll use the System to Human transfer site. An ST user wishes
 
 3. You should see an email with an attachment
 
-   ![Email with attachment](images/image135.png)
+   ![Email with attachment](../images/image235.png)
 
 4. Click on the link to download the file
 

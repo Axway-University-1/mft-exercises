@@ -33,7 +33,7 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 1. Create a new Route Template called `To Instructor Compress`
 
-   ![Route template compress](images/image66.png)
+   ![Route template compress](../images/image133.png)
 
 2. Select *Execute only the first route whose condition is met*
 
@@ -58,17 +58,17 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 6. Add the *Compress* step and uncheck *Compress All files into a single archive*
 
-   ![Compress step](images/image67.png)
+   ![Compress step](../images/image135.png)
 
 7. Save the step (Save Draft)
 
 8. Add a *Send to Partner* step to transmit the file to your Instructor
 
-   ![Send to partner](images/image68.png)
+   ![Send to partner](../images/image137.png)
 
 9. Press *Save Draft*. Your route should look like this:
 
-   ![Route overview](images/image69.png)
+   ![Route overview](../images/image139.png)
 
 10. Click *Save Template*, then *Close*
 
@@ -78,7 +78,7 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 1. Open the template you created in the previous task
 
-   ![Template list](images/image70.png)
+   ![Template list](../images/image141.png)
 
 2. Click *+ Route*
 
@@ -88,11 +88,11 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 5. Add a *Send to Partner* Step (Click *+Step*)
 
-   ![Second route send to partner](images/image71.png)
+   ![Second route send to partner](../images/image143.png)
 
 6. Press *Save Draft* and *Save Template*
 
-   ![Two routes](images/image72.png)
+   ![Two routes](../images/image145.png)
 
 7. Click *Close*
 
@@ -102,7 +102,7 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 1. Assign the *To Instructor Compress* template
 
-   ![Assign compress route](images/image73.png)
+   ![Assign compress route](../images/image147.png)
 
 2. Provide a route name such as `PR Compress Text Files to Instructor`
 
@@ -114,7 +114,7 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 1. In the `/toInstructor` subscription, change the route to the one you just created and save the subscription
 
-   ![Subscription route change](images/image74.png)
+   ![Subscription route change](../images/image149.png)
 
 ---
 
@@ -126,7 +126,7 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 3. Check the file flows for each of the received files
 
-   ![Received file flows](images/image75.png)
+   ![Received file flows](../images/image151.png)
 
 > Note that the extension `.zip` is automatically added to the filename after the text file is compressed. Any other file is not compressed – it uses the second simple route and is transmitted without change.
 

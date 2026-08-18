@@ -61,7 +61,7 @@ Download the file to your training server, or use the tracking table to discover
 
 1. Select the EX11PGP account, go to *Certificates* and select *Partner Certificates*
 
-   ![Partner certificates](images/image106.png)
+   ![Partner certificates](../images/image202.png)
 
 2. Select *Import…*
 
@@ -69,15 +69,15 @@ Download the file to your training server, or use the tracking table to discover
 
 4. Provide an alias – i.e. `Instructor Public PGP Key`
 
-   ![Import PGP key](images/image107.png)
+   ![Import PGP key](../images/image203.png)
 
 5. Navigate to the downloaded file and press *Import*. If successful, you should see the imported key.
 
-   ![Key imported](images/image108.png)
+   ![Key imported](../images/image205.png)
 
 > **NOTE:** If you want the key listed in the dropdown in the encryption step, change the Access level to public and save.
 
-   ![Public key access](images/image109.png)
+   ![Public key access](../images/image206.png)
 
 ---
 
@@ -91,11 +91,11 @@ Download the file to your training server, or use the tracking table to discover
    ${stenv.subscription_attr_uservars_uploadfolder}
    ```
 
-   ![Upload folder expression](images/image110.png)
+   ![Upload folder expression](../images/image207.png)
 
 3. Change the username to `ex11`; the password is again `axway`
 
-   ![Username change](images/image111.png)
+   ![Username change](../images/image208.png)
 
 > Alternatively, you can create a new site as described above.
 
@@ -111,7 +111,7 @@ A route can also be specified on a per-account basis, so we'll complete this exe
 
 1. Assign the empty template
 
-   ![Encryption package route](images/image112.png)
+   ![Encryption package route](../images/image209.png)
 
 2. Call your package route `PR_ENCRYPT`
 
@@ -119,11 +119,11 @@ A route can also be specified on a per-account basis, so we'll complete this exe
 
 4. Add the Encrypt step
 
-   ![Encrypt step](images/image113.png)
+   ![Encrypt step](../images/image210.png)
 
 5. For this exercise, use *Encrypt Only*
 
-   ![Encrypt only](images/image114.png)
+   ![Encrypt only](../images/image212.png)
 
 6. Add a *Send to Partner* Step
 
@@ -137,13 +137,13 @@ A route can also be specified on a per-account basis, so we'll complete this exe
 
    (Replace *Stockbroker* with your server name, first letter capitalized)
 
-   ![Overwrite upload folder](images/image115.png)
+   ![Overwrite upload folder](../images/image215.png)
 
 9. Create the subscription (using the Advanced Routing application) with a folder name like `/EncryptandSendToInstructor`
 
 10. Select your Package route
 
-    ![Encryption subscription](images/image116.png)
+    ![Encryption subscription](../images/image216.png)
 
 11. Set the On Success Post Routing Action to *move* to:
 
@@ -151,7 +151,7 @@ A route can also be specified on a per-account basis, so we'll complete this exe
     /archive/${stenv.target}
     ```
 
-    ![Post routing move](images/image117.png)
+    ![Post routing move](../images/image217.png)
 
 > Don't send any files yet – we'll build the rest of the scenario first.
 
@@ -161,19 +161,19 @@ A route can also be specified on a per-account basis, so we'll complete this exe
 
 1. Click *Generate* having selected the *Private Certificates* tab
 
-   ![Generate private key](images/image118.png)
+   ![Generate private key](../images/image218.png)
 
 2. Create an RSA PGP certificate of 4096 bytes. Substitute your server name and student number for the email.
 
-   ![Private key details](images/image119.png)
+   ![Private key details](../images/image219.png)
 
 3. Export your PGP public key by clicking the Alias in the list of certificates
 
-   ![Export public key](images/image120.png)
+   ![Export public key](../images/image220.png)
 
 4. Select *Export*. Do NOT select *Export private key*
 
-   ![Export options](images/image121.png)
+   ![Export options](../images/image221.png)
 
 Your key will be downloaded as `xxxxxxxx.asc`.
 
@@ -183,7 +183,7 @@ Your key will be downloaded as `xxxxxxxx.asc`.
 
 1. Select the Empty Route Template to create a new Route in the account
 
-   ![Send key route](images/image122.png)
+   ![Send key route](../images/image222.png)
 
 2. Call your package Route `PR_sendKey`
 
@@ -191,11 +191,11 @@ Your key will be downloaded as `xxxxxxxx.asc`.
 
 4. Overwrite the upload folder to be `/KeyFromStockbroker` (replace *Stockbroker* with your server name)
 
-   ![Key upload folder](images/image123.png)
+   ![Key upload folder](../images/image223.png)
 
 5. Create an Advanced Routing subscription with folder `/KeyToInstructor` and select the Route
 
-   ![Key subscription](images/image124.png)
+   ![Key subscription](../images/image224.png)
 
 ---
 
@@ -205,7 +205,7 @@ Your key will be downloaded as `xxxxxxxx.asc`.
 
 2. Let your instructor know that you sent them your PGP public key
 
-   ![Notify instructor](images/image125.png)
+   ![Notify instructor](../images/image225.png)
 
 ---
 
@@ -213,7 +213,7 @@ Your key will be downloaded as `xxxxxxxx.asc`.
 
 1. Using the Empty template, create a package route in the `EX11PGP` account
 
-   ![Decrypt package route](images/image126.png)
+   ![Decrypt package route](../images/image226.png)
 
 2. Call it `PR_Decrypt`
 
@@ -221,10 +221,13 @@ Your key will be downloaded as `xxxxxxxx.asc`.
 
 4. Add a PGP Decrypt step (encryption only, no signature)
 
+
+
+   ![Decrypt publish](../images/image227.png)
+
 5. Add a *Publish to Account* step to put the file in a folder once decrypted
 
-   ![Decrypt publish](images/image127.png)
-
+    ![Publish to account](../images/image228.png)
 ---
 
 ### Task 12: Create the Subscription
@@ -233,7 +236,7 @@ Your key will be downloaded as `xxxxxxxx.asc`.
 
 2. Link to your Package Route `PR_Decrypt`
 
-   ![Decrypt subscription](images/image128.png)
+   ![Decrypt subscription](../images/image229.png)
 
 ---
 

@@ -32,7 +32,7 @@ We'll modify the previous use case to force a registration in ST for the user be
 
 1. Change the delivery method as shown
 
-   ![Delivery method](images/image136.png)
+   ![Delivery method](../images/image236.png)
 
 ---
 
@@ -40,7 +40,7 @@ We'll modify the previous use case to force a registration in ST for the user be
 
 1. Note that this time, the email recipient receives 2 emails
 
-   ![Two emails](images/image137.png)
+   ![Two emails](../images/image237.png)
 
 One email is an enrolment email. Click this first to create the temporary account.
 
@@ -58,7 +58,7 @@ Create an account template that will be used during enrollment.
 
 1. You should now see two emails. Click on the enrolment one:
 
-   ![Enrolment email](images/image138.png)
+   ![Enrolment email](../images/image238.png)
 
 2. Login using the credentials supplied
 
@@ -66,15 +66,15 @@ Create an account template that will be used during enrollment.
 
 4. After a successful password change, login again
 
-   ![Login after password change](images/image139.png)
+   ![Login after password change](../images/image239.png)
 
 5. Click on *Mailbox* and then *Inbox*
 
-   ![Mailbox inbox](images/image140.png)
+   ![Mailbox inbox](../images/image240.png)
 
 6. Download the file
 
-   ![Download file](images/image141.png)
+   ![Download file](../images/image241.png)
 
 > There is also an option to reply to the sender (the EX12 account) to let them know you received the file.
 
@@ -84,7 +84,7 @@ Create an account template that will be used during enrollment.
 
 1. Via the Admin UI you can control the unlicensed accounts that are created
 
-   ![Unlicensed accounts](images/image142.png)
+   ![Unlicensed accounts](../images/image242.png)
 
 ---
 

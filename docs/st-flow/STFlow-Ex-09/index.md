@@ -32,7 +32,7 @@ The Human Resources department wishes to send a single zip file to their partner
 
 1. Create an account with the name `HR` and password `axway`
 
-   ![HR account](images/image81.png)
+   ![HR account](../images/image163.png)
 
 2. Create a New Route Template called `HR Outbound Processing`
 
@@ -42,29 +42,29 @@ The Human Resources department wishes to send a single zip file to their partner
 
 5. Create a Single Archive called `HR.zip`
 
-   ![Single archive](images/image82.png)
+   ![Single archive](../images/image165.png)
 
 6. Add the *Send to Partner* Step
 
-   ![Send to partner](images/image83.png)
+   ![Send to partner](../images/image167.png)
 
 7. Make sure that the step processes only the zip files (via a file name condition or via processing only files coming from the previous step)
 
 8. Ensure that you check *Delete Files after Step is complete*
 
-   ![Delete files after step](images/image84.png)
+   ![Delete files after step](../images/image169.png)
 
 **Add a Publish to Account Step:**
 
 9. This step sends any files OTHER than the zip file to a directory called UNKNOWN underneath the home folder of the account
 
-   ![Publish to account](images/image85.png)
+   ![Publish to account](../images/image171.png)
 
 > **Hint:** Click the pencil next to *Account* to add an expression instead of a name. `${account.name}` gives you the name of the account currently using this route.
 
 10. The result should look like this:
 
-    ![Route result](images/image86.png)
+    ![Route result](../images/image173.png)
 
 11. Save everything you created.
 
@@ -74,11 +74,11 @@ The Human Resources department wishes to send a single zip file to their partner
 
 1. Assign the route template to the HR account
 
-   ![Assign route](images/image87.png)
+   ![Assign route](../images/image175.png)
 
 2. Save the Route with name `PR_to_Partner`
 
-   ![Save route](images/image88.png)
+   ![Save route](../images/image177.png)
 
 ---
 
@@ -91,15 +91,18 @@ The Human Resources department wishes to send a single zip file to their partner
 
 1. Create the subscription
 
-   ![Advanced routing subscription](images/image89.png)
+   ![Advanced routing subscription](../images/image179.png)
+
+
+
+   ![Delete on success](../images/image181.png)
 
 2. Check *Delete on Success* to clean the folder after the file is successfully sent
 
-   ![Delete on success](images/image90.png)
-
+   ![Trigger processing](../images/image183.png)
 3. Check *Trigger processing of files based upon condition*
 
-   ![Trigger processing](images/image91.png)
+   ![Trigger processing](../images/image185.png)
 
 The trigger condition can be written in two ways:
 
@@ -123,7 +126,7 @@ You could ask your instructor to do this, or log into the HR account via the Web
 
 1. Validate that nothing happens until the trigger file `trigger.me` is uploaded
 
-   ![Trigger validation](images/image92.png)
+   ![Trigger validation](../images/image187.png)
 
 ---
 

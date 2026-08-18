@@ -39,7 +39,7 @@ We'll implement the same use case as in Exercise 7, but using a different capabi
 
 5. In the *Current Filter* radio boxes field, select *Wildcard Pattern* and specify `*.txt` in the *Filter Pattern* field
 
-   ![Wildcard filter](images/image76.png)
+   ![Wildcard filter](../images/image153.png)
 
 The compress step will now only execute when a file pattern of `*.txt` is received.
 
@@ -49,7 +49,7 @@ The compress step will now only execute when a file pattern of `*.txt` is receiv
 
 8. Switch the *Files to process* radio box to *All available files*
 
-   ![Files to process](images/image77.png)
+   ![Files to process](../images/image155.png)
 
 9. Save Draft, Save Template, and Close
 
@@ -59,7 +59,7 @@ The compress step will now only execute when a file pattern of `*.txt` is receiv
 
 1. Create the route package with the name `PR Ex8 Compress` in the account
 
-   ![Route package](images/image78.png)
+   ![Route package](../images/image157.png)
 
 ---
 
@@ -67,7 +67,7 @@ The compress step will now only execute when a file pattern of `*.txt` is receiv
 
 1. Modify the Manufacturing Account's subscription to point to the new package route
 
-   ![Modify subscription](images/image79.png)
+   ![Modify subscription](../images/image159.png)
 
 ---
 
@@ -75,7 +75,7 @@ The compress step will now only execute when a file pattern of `*.txt` is receiv
 
 1. Ask your instructor to send some more files
 
-   ![Transfer files](images/image80.png)
+   ![Transfer files](../images/image161.png)
 
 > Note how the result is the same as with the previous exercise. If the files not ending in `.txt` were not sent, check that you changed *Files to process* in your route.
 

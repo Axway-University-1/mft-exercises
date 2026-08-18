@@ -46,7 +46,7 @@ This account will be used to send emails to our support organisation.
 
 2. Make sure the Home folder Access level is set to **public** so that any other account can send files here
 
-   ![Public home folder](images/image93.png)
+   ![Public home folder](../images/image188.png)
 
 ---
 
@@ -62,7 +62,7 @@ This account will be used to send emails to our support organisation.
 
 5. Use the *RoutingTriggered* Notification template
 
-   ![Notification template](images/image94.png)
+   ![Notification template](../images/image189.png)
 
 ---
 
@@ -74,7 +74,7 @@ Use the Advanced Routing Application.
 
 2. Select the `PR_Send_Email` Route
 
-   ![UNKNOWN subscription](images/image95.png)
+   ![UNKNOWN subscription](../images/image190.png)
 
 ---
 
@@ -84,13 +84,13 @@ We need two more accounts – SALES and PURCHASING.
 
 1. Create a `Sales` Account (use any password you like)
 
-   ![Sales account](images/image96.png)
+   ![Sales account](../images/image191.png)
 
 > **Reminder:** Make sure that you set the Home Folder Access Level to Public.
 
 2. Similarly, create a `Purchasing` Account (you can use *Duplicate* account – make sure to enable it afterwards)
 
-   ![Purchasing account](images/image97.png)
+   ![Purchasing account](../images/image192.png)
 
 ---
 
@@ -100,7 +100,7 @@ This account receives the incoming files from your partner – we'll call it Par
 
 1. Provide a password of `axway`
 
-   ![Partner1 account](images/image98.png)
+   ![Partner1 account](../images/image193.png)
 
 ---
 
@@ -114,19 +114,19 @@ This account receives the incoming files from your partner – we'll call it Par
 
 4. Change the *Flow* drop down to *Stop on Failure*
 
-   ![Decompress step](images/image99.png)
+   ![Decompress step](../images/image194.png)
 
 5. Add a *Publish to account* step to send Invoices to the `Purchasing` account
 
-   ![Publish invoices](images/image100.png)
+   ![Publish invoices](../images/image195.png)
 
 6. Add another Step to send Orders to the Sales Department
 
-   ![Publish orders](images/image101.png)
+   ![Publish orders](../images/image196.png)
 
 7. Add a final *Publish to account* step sending any other files to the `UNKNOWN` account
 
-   ![Publish unknown](images/image102.png)
+   ![Publish unknown](../images/image198.png)
 
 > Note the *Files to Process* setting.
 
@@ -154,7 +154,7 @@ This account receives the incoming files from your partner – we'll call it Par
 
 If you reinstalled SecureTransport as part of your class, the mail server is not configured. Check the *SMTP group* in the *Server Configuration* menu and make sure the parameters are filled in.
 
-   ![SMTP settings](images/image103.png)
+   ![SMTP settings](../images/image199.png)
 
 ---
 
@@ -162,7 +162,7 @@ If you reinstalled SecureTransport as part of your class, the mail server is not
 
 1. Initiate the flow by submitting files yourself or ask your instructor to send you a zip file. Files are located in `STSOURCE/EX10`.
 
-   ![Receive files](images/image104.png)
+   ![Receive files](../images/image200.png)
 
 2. Check your email at `https://mft-env:10033`
 
@@ -170,7 +170,7 @@ If you reinstalled SecureTransport as part of your class, the mail server is not
 
 4. You will see the email:
 
-   ![Email received](images/image105.png)
+   ![Email received](../images/image201.png)
 
 > If you do not see the email, inspect your ST server logs, resolve any errors, then execute your flow again.
 
