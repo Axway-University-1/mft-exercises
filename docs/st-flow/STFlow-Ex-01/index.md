@@ -47,17 +47,17 @@ In this task, you will connect to the Axway/ReadyTech training environment and l
 
 2. Navigate to `https://axway.instructorled.training`
 
-   ![Training environment access](images/image3.png)
+   ![Training environment access](./images/image005.png)
 
 3. Enter the access code provided by your instructor and click *Continue*
 
 4. When logging in for the first time, you will be presented with an access code activation dialog box. Enter your first and last name, check the consent box, and click **OK**.
 
-   ![Access code activation](images/image4.png)
+   ![Access code activation](./images/image007.png)
 
 5. Once logged in, you will see the following:
 
-   ![Training environment home screen](images/image5.png)
+   ![Training environment home screen](./images/image009.png)
 
 6. Click on *Lab* at the top of the screen
 
@@ -65,11 +65,11 @@ In this task, you will connect to the Axway/ReadyTech training environment and l
 
 8. Enter `axway` in the *Login* and *Password* fields of the *Log in* dialog box
 
-   ![Login](images/image7.png)
+   ![Login](./images/image013.png)
 
 9. At this point you should have access to your lab server desktop
 
-   ![Lab server desktop](images/image8.png)
+   ![Lab server desktop](./images/image015.png)
 
 > **NOTE:** Click on **Activities** at the top left corner at any time to bring this UI to the front. If there are open applications (such as Firefox, Filezilla and so on), you will see them here as well.
 
