@@ -124,7 +124,8 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 ### Task 5: Manually Initiate the Server Pull
 
-> **NOTE:** If you set the start time to 'Start now' in the previous task, this manual pull may not find any new files to download. 
+> **NOTE:** If you set the start time to 'Start now' in the previous task, this manual pull may not find any new files to download.
+
 1. On John's *Subscription* tab, click the `/pulledFromInstructor` BasicApp Subscription to edit it
 
 2. Click the *Retrieve Files Now* button to manually trigger the pull
