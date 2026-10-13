@@ -86,7 +86,7 @@ Create two accounts and subscribe them to the shared folder application.
 
 3. Click *Save*
 
-4. Click the *Subscriptions* tab
+4. Click the *Subscriptions* tab in each account.
 
 5. Select *project1* from the *Subscribe to* drop-down field
 
