@@ -42,7 +42,7 @@ We'll introduce you to the training environment and then get you started by crea
 
 3. In the *User ID* and *Password* fields enter `admin`
 
-> **NOTE:** If you took the Basic class and kept your server, use the password you changed the admin password to.
+> **NOTE:** If you took the Basic Admin class and kept your server, use the password you changed the admin password to.
 
 4. Click the *Sign in* button
 
@@ -70,7 +70,7 @@ Hovering over any of the menus while they are not expanded will show you a toolt
 
 In this task, you will create a SecureTransport user.
 
-> **NOTE:** The table below assumes you are student `01`. Substitute your own number where appropriate. Please name your account **John** as shown below. If you use a different name, remember it and use it any time the instructions in later exercises refer back to this account.
+> **NOTE:** The table below assumes you are student `01`. As every student has their own mail server, you can substitute your own number where appropriate or you can use 01 throughout the class. Please name your account **John** as shown below. If you use a different name, remember it and use it any time the instructions in later exercises refer back to this account.
 
 | Field | Value |
 | --- | --- |
