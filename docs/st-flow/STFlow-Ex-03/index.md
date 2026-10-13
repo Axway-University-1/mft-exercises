@@ -8,14 +8,9 @@ title: SecureTransport File Flows
 
 
 
-| Workbook Version | 1.8 |
+| ST Update | May 2026 |
 | ---- | ---- |
-| Issued | July 2026 |
-| ST Server Updated | May 2026 |
-| Written by | Annie Yotova |
-
-Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you will learn how to build, manage, and troubleshoot SecureTransport file transfer flows using user accounts, subscriptions, transfer sites, advanced routing, PGP encryption, shared folders, compression, and adhoc transfers.
-
+| Exercise Update | October 2026 |
 
 ---
 
@@ -108,19 +103,19 @@ It is probably empty at this time.
 
 2. Select *BasicApp* from the *Subscribe to* dropdown and click *Subscribe…*
 
-3. Change *BasicApp* to something more meaningful – perhaps `toInstructor`
+3. Change *BasicApp* to something more meaningful – for example `toInstructor`. This is the name of the folder John will see when they login to upload a file.
 
    ![Subscription folder](../images/image065.png)
 
-4. Scroll down to the *For Files Sent to this Account…* section (the outbound settings)
+4. Scroll down to the *For Files Sent to this Account or its Partners* section (this is the outbound section for this subscription).
 
-5. Check the *Send Files Directly To* box and click on the Instructor Transfer Site
+5. Check the *Send Files Directly To* box, and click on the *Instructor* Transfer Site you created earlier. If you used a different name for your site in Task 2, click in the name you used.
 
-6. Check the *on Success Delete* option
+6. Check the *On Success -> Delete* option at the bottom of the screen.
 
    ![Outbound settings](../images/image067.png)
 
-7. Save the subscription via *Add*
+7. Save the subscription via *Add*. The result should look like this:
 
    ![Save subscription](../images/image069.png)
 
@@ -138,9 +133,9 @@ Any files received in the `toInstructor` folder will be transmitted to the remot
 
 4. Enter `axway` as the Password
 
-5. Click *Sign In*
+5. Click *Sign In*. You will notice that now John can see the folder you created in his configuration.
 
-6. Click the *toInstructor* folder
+6. Click on the *toInstructor* folder to open it.
 
 7. Upload a file (any file will do)
 
@@ -156,7 +151,7 @@ Note that on success, the file is no longer visible in the upload folder.
 
    ![File tracking](../images/image075.png)
 
-10. Open the Instructor Transfer Site attached to the John account and select *List* on the upload folder (fromStockbroker)
+10. Open the Instructor Transfer Site attached to the John account and select *List* on the upload folder (fromStockbroker) to verify that the file was successfully delivered. This action may not work for all of your partners - for example they may be removing the file upon receipt. In this case the Instructor server is configured to just allow the file to arrive so you can verify the receipt for yourself.
 
     ![List upload folder](../images/image077.png)
 
