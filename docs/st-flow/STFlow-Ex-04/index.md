@@ -100,11 +100,9 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 6. On the scheduler pop-up, check *Schedule events on a recurring basis*
 
-7. Select *Hourly*, change the "hours" drop down to "minutes" and enter `30 minutes` for the schedule. Select a start time or leave it on "Start time". The clock on the right corner of the scheduler page shows you the time in the server timezone (which is used by all schedulers on the server).
+7. Select *Hourly*, change the "hours" drop down to "minutes" and enter `30 minutes` for the schedule. Select a start time or leave it on "Start now". The clock on the right corner of the scheduler page shows you the time in the server timezone (which is used by all schedulers on the server).
 
    ![Schedule configuration](../images/image087.png)
-
-> **NOTE:** If you select *Start now*, the scheduler will execute soon after you save the site. If you do not want that, set the start time in the future.
 
 8. Save your scheduler using *OK*
 
@@ -124,7 +122,7 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 ### Task 5: Manually Initiate the Server Pull
 
-> **NOTE:** If you set the start time to 'Start now' in the previous task, this manual pull may not find any new files to download.
+> **NOTE:** If you set the start time to 'Start now' in the previous task, skip this task and move to the next one. 
 
 1. On John's *Subscription* tab, click the `/pulledFromInstructor` BasicApp Subscription to edit it
 
