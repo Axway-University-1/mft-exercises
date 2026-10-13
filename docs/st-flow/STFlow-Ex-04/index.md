@@ -149,7 +149,7 @@ If you see any issues or there are no file transfers, check the Server Log and u
 
    Why are no files being pulled this time? Check the Server Log and note the message telling you why no files were downloaded.
 
-   ![Server log](../images/image100.jpg)
+   ![Server log](../images/image100.png)
 
 2. On the *Subscriptions* tab of the John account, select the subscription by checking the checkbox in front of it, check the *Clear Pull History* option, and then click *Execute*
 
