@@ -8,12 +8,7 @@ title: SecureTransport Basic Administration
 
 
 
-| Average time required to complete this lab | 60 minutes |
-| ---- | ---- |
-| Lab last updated | May 2026 |
-| Lab last tested | May 2026 |
-
-Welcome to the SecureTransport Basic Administration Lab! In this hands-on session, we'll ........
+Welcome to the SecureTransport Basic Administration Lab! In this hands-on session, we will prepare our environment for an installation. You will rarely need to do this process on a production server but it is a common operation on a test server.
 
 
 
