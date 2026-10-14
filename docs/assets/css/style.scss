@@ -14,6 +14,7 @@ $paper:       #fbfbfb;   // section background
 $ink:         #2b2b2b;   // body text
 $code-bg:     #D9D8D6;   // inline code background
 $pre-bg:      #22272B;   // code block background
+$green:       #3FB950;   // alternate code color
 
 /* =========================================================
    Base typography
@@ -146,6 +147,13 @@ code {
   .mi  { color: #ff7200; }  // int value
   .kc  { color: #9581ff; }  // boolean value
   .err { color: #d22630; background-color: transparent; }
+}
+
+/* Green variant: add {: .green} after inline code or a code block */
+code.green,
+.green code,
+.green .highlight code .nl {
+  color: $green;
 }
 
 pre {

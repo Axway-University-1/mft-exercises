@@ -50,7 +50,7 @@ If you try to login with *John* in the user interface (as we did in the previous
 
 1. Edit *John*'s *Instructor* Transfer Site
 
-2. In the *Download Folder* field, add `/toStockbroker` (substitute your own server name as we did for the upload folder)
+2. In the *Download Folder* field, add `/toStockbroker`{: .green} (substitute your own server name as we did for the upload folder)
 
 3. Add a file Download pattern of `*.ex4`
 
