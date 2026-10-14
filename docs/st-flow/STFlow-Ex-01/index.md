@@ -6,18 +6,9 @@ title: SecureTransport File Flows
 # Axway University
 # SecureTransport File Flows
 
-
-
-| Workbook Version | 1.8 |
+| ST Update | May 2026 |
 | ---- | ---- |
-| Issued | July 2026 |
-| ST Server Updated | May 2026 |
-| Written by | Annie Yotova |
-
-Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you will learn how to build, manage, and troubleshoot SecureTransport file transfer flows using user accounts, subscriptions, transfer sites, advanced routing, PGP encryption, shared folders, compression, and adhoc transfers.
-
-
-
+| Exercise Update | October 2026 |
 
 ---
 
@@ -25,21 +16,13 @@ Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you wi
 
 ### About This Exercise
 
-In this exercise, you will be introduced to the SecureTransport environment.
+In this exercise, you will be introduced to the SecureTransport environment which will be used during this class and you will learn how to use the system.
 
 ---
 
-### Task 1: Know your own Parameters
-
-Each course attendee will have their own unique parameters for use within the labs. The lab uses **green** highlighting wherever you need to substitute your own values.
-
-Please ask your instructor what your student number is.
 
 
-
----
-
-### Task 2: Access the Training Environment
+### Task 1: Access the Training Environment
 
 In this task, you will connect to the Axway/ReadyTech training environment and log into your training server.
 
@@ -72,6 +55,23 @@ In this task, you will connect to the Axway/ReadyTech training environment and l
    ![Lab server desktop](../images/image015.png)
 
 > **NOTE:** Click on **Activities** at the top left corner at any time to bring this UI to the front. If there are open applications (such as Firefox, Filezilla and so on), you will see them here as well.
+
+---
+
+### Task 2: Know your own Parameters
+
+Each course attendee will have their own unique parameters for use within the labs. The exercises use **green**{: .green} highlighting wherever you need to substitute your own values.
+
+You can find your server name by opening a Terminal on your server and typing 
+
+cat /etc/hosts
+
+![Lab server desktop](../images/image015-2.png)
+
+Find the second line with the IP shown on the line that also contains mft-env ('mft-env' is the hostname of the server image we are using) and take a note of your server name and IP. For example in the screenshot above, the server name is stockbroker and the student number is 01. 
+
+Alternatively you can ask your instructor for your server name and student number and you may also have received them earlier.
+
 
 ---
 
