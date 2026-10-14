@@ -80,7 +80,7 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 ![Folder Monitor site Upload](../images/image083-2.png)
 
-8. Click *Add* to save your Folder Monitor
+7. Click *Add* to save your Folder Monitor
 
 ---
 
