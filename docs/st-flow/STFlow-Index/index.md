@@ -16,7 +16,7 @@ Exercise 5 - Shared Folder Application<br>
 [https://axway-university-1.github.io/mft-exercises/st-flow/STFlow-Ex-05/](https://axway-university-1.github.io/mft-exercises/st-flow/STFlow-Ex-05/)
 
 Exercise 6 - File Flow using Advanced Routing<br>
-[https://axway-university-1.github.io/mft-exercises/st-flow/STFlow-Ex-06/](https://axway-university-1.github.io/mft-exercises/st-flow/STFlow-Ex-01/)
+[https://axway-university-1.github.io/mft-exercises/st-flow/STFlow-Ex-06/](https://axway-university-1.github.io/mft-exercises/st-flow/STFlow-Ex-06/)
 
 Exercise 7 - Conditional Routing 1<br>
 [https://axway-university-1.github.io/mft-exercises/st-flow/STFlow-Ex-07/](https://axway-university-1.github.io/mft-exercises/st-flow/STFlow-Ex-07/)
