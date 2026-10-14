@@ -62,11 +62,11 @@ Now, we will add the file transfer flow to the John account. We will still use t
 | Site Name | Instructor |
 | Server | galaxy1 |
 | Port | 8022 |
-| Upload Folder | fromStockbroker |
+| Upload Folder | `fromStockbroker`{: .green} |
 | User Name | axway |
 | Password | axway (check the *use password* box) |
 
-> **NOTE:** Use your **servername** as part of the upload folder – so if your server is `stockbroker`, make the upload folder `fromStockbroker` (use uppercase for the first letter of your servername).
+> **NOTE:** Use your **servername** as part of the upload folder – so if your server is `stockbroker`{: .green}, make the upload folder `fromStockbroker`{: .green} (use uppercase for the first letter of your servername).
 
 5. Save your site using the *Add* button. The result should look like this:
    ![Add new transfer site](../images/image053.png)
