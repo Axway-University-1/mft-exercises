@@ -64,11 +64,13 @@ Each course attendee will have their own unique parameters for use within the la
 
 You can find your server name by opening a Terminal on your server and typing 
 
-cat /etc/hosts
+   ```text
+   cat /etc/hosts
+   ```
 
 ![Lab server desktop](../images/image015-2.png)
 
-Find the second line with the IP shown on the line that also contains mft-env ('mft-env' is the hostname of the server image we are using) and take a note of your server name and IP. For example in the screenshot above, the server name is stockbroker and the student number is 01. 
+Find the second line with the IP shown on the line that also contains mft-env ('mft-env' is the hostname of the server image we are using) and take a note of your server name and IP. For example in the screenshot above, the server name is **stockbroker**{: .green}  and the student number is **01**{: .green} . 
 
 Alternatively you can ask your instructor for your server name and student number and you may also have received them earlier.
 
