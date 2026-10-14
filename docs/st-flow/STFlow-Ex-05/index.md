@@ -19,7 +19,7 @@ title: SecureTransport File Flows
 
 ### About This Exercise
 
-In this exercise, you will create a shared folder application that will allow two accounts to share content without being able to see each other's entire directory structure and without the need for each user to have their own copy of the files. Very often these folders are also shared with external applications as well. 
+In this exercise, we want to allow two accounts to share content without being able to see each other's entire directory structure and without the need for each user to have their own copy of the files. 
 
 ### High Level Solution
 
