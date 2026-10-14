@@ -18,7 +18,20 @@ title: SecureTransport File Flows
 
 ### About This Exercise
 
-In this exercise, you will simulate a real-world use case. Your internal application called *Manufacturing* will transmit files to SecureTransport, which will then be sent to a remote partner (your instructor's server).
+In this exercise, you will simulate a real-world use case. Your internal application called *Manufacturing* will transmit files to SecureTransport, which will then be sent to a remote partner (your instructor's server). In addition we want to make this action repeatable so that additional applications can reuse the logic later. 
+
+### High Level Solution
+
+In order to achieve this, we will need to create the following objects in SecureTransport
+1. An Account called *Manufacturing* which will represent the internal application. 
+2. An Account called *Instructor* which will represent the partner we are sending the files to. This account will not login into ST for this scenario it but will hold all the information we need for us to connect to their server. 
+3. A Transfer site inside of the *Instructor* account to allow us to connect to their server. 
+4. A Route Template which implements the business logic (send the file to the partner)
+5. An Advanced Routing application
+6. A Composite Route Package in the *Manufacturing* account which uses the template route we just created
+7. A subscription in the *Manufacturing* account to determine which files are send to Instructor. 
+
+We are not going to reuse any of the objects we created in earlier exercises. 
 
 ---
 
@@ -43,23 +56,25 @@ In this exercise, you will simulate a real-world use case. Your internal applica
 | GID | 7000 |
 | Home Directory | `/usrdata/NoBU/Instructor` |
 | Password | axway |
+You can also leave this user without an ability to login onto ST. You can create this user by following the usual "New Account" process or you can duplicate the Manifacturing account. Don't forget to enable the account if you create it via the duplication process.
 
 ---
 
-### Task 3: Create a Transfer Site on the Instructor Account
+### Task 3: Create a Transfer Site in the Instructor Account
 
-Create a shareable transfer site with connectivity to the Instructor server that is accessible from ANY account or route on your SecureTransport instance.
+Create a shareable transfer site with connectivity to the Instructor server that is accessible from ANY account or route in your SecureTransport server. This is achieved by setting the Access Level on the Transfer site to Public (the default value is Private).
 
 | Field | Value |
 | --- | --- |
 | Transfer Protocol | SSH |
 | Site Name | TS_SFTP_Instructor |
+| Access Level | Public |
 | Server | galaxy1 |
 | Port | 8022 |
 | Username | axway |
 | Password | axway |
-| Upload Folder | fromStockbroker (substitute your own node name) |
-| Access Level | Public |
+| Upload Folder | `fromStockbroker`{: .green} (substitute your own server name) |
+
 
    ![Public transfer site](../images/image107.png)
 
@@ -89,7 +104,7 @@ Create a shareable transfer site with connectivity to the Instructor server that
    ${basename(transfer.target)}_${date("yyyy-MMM-dd_HH-mm")}
    ```
 
-   This expression removes the extension from the filename and replaces it with an underscore followed by the current time. For example, `st.txt` becomes `st_2025-Oct-21_13-41`.
+   This expression removes the extension from the filename and replaces it with an underscore followed by the current date and time. For example, `st.txt` becomes `st_2025-Oct-21_13-41`.
 
    ![Rename step](../images/image113.png)
 
@@ -97,13 +112,14 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
 **Add a Send To Partner step:**
 
-9. Click *+ Step* again and select *Send To Partner*
+9. Click *+ Step* (it is in the header line of the table that shows your rename step) and select *Send To Partner*
 
-10. Select *Stop on Failure* in the *Flow* dropdown box
 
-11. Specify an account: `Instructor`
+10. Specify an account: `Instructor`. If you start typing the name, ST will autocomplete for you based on the existing accounts in the server.
 
-12. Select the *TS_SFTP_Instructor* transfer site in *Account's Transfer Sites*
+11. Select the *TS_SFTP_Instructor* transfer site in *Account's Transfer Sites* by clicking on the field to open the drop down box.
+
+12. Select *Stop on Failure* in the *Flow* dropdown box
 
     ![Send to partner step](../images/image115.png)
 
@@ -115,7 +131,7 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
 ### Task 5: Create an Advanced Routing Application
 
-1. Click *Add New*
+1. Navigate to Application -> Application and click *Add New*
 
 2. Provide a name – `AdvRouting` or anything you prefer
 
@@ -139,7 +155,7 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
    ![Assign route](../images/image119.png)
 
-4. Enter `PR To Instructor` as the Route Name
+4. Enter `PR To Instructor` as the Route Name. Leave all other fields to their default values. You can see the route we created earlier in the "Template Routes" section. 
 
 5. Click *Save*
 
@@ -151,23 +167,25 @@ Create a shareable transfer site with connectivity to the Instructor server that
 
    ![Subscription route](../images/image123.png)
 
-8. Check the *On Success → Delete* option in Post Routing Settings
+8. Check the *On Success → Delete* option in Post Routing Settings at the bottom of the screen.
 
    ![Post routing settings](../images/image125.png)
 
 9. Save your subscription by clicking *Add*
 
+Now you are ready to receive files from the Manufacturing application and process them. 
+
 ---
 
 ### Task 7: Ask your instructor to Send you a file from the Manufacturing Application
 
-1. Let your instructor know you are ready to receive a file, and tell them which server your system is (e.g. `agrifarm`, `stockbroker`)
+1. Let your instructor know you are ready to receive a file, and tell them which server your system is (e.g. `agrifarm`, `stockbroker`). Alternatively you can test your scenario by logging in the Manifacturing account via the User HTTPS interface (running on port 8443 in this lab) and uploading a file into the toInstructor folder. 
 
-2. Validate that you received the file and that its filename was transformed on transmission
+2. Validate that the file was successfully sent to your partner (Instructor) and that the filename of the file was transformed on transmission by opening the records in the File Tracking table. 
 
    ![Received file](../images/image127.png)
 
-3. Verify that all route steps were successful by clicking on the filename of the inbound file
+3. You can also verify that all route steps were successful by clicking on the filename of the inbound file in the File Tracking table.
    ![Transfer details](../images/image131.png)
    ![Route steps success](../images/image129.png)
 
