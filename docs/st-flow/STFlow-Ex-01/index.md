@@ -60,7 +60,7 @@ In this task, you will connect to the Axway/ReadyTech training environment and l
 
 ### Task 2: Know your own Parameters
 
-Each course attendee will have their own unique parameters for use within the labs. The exercises use **green**{: .green} highlighting wherever you need to substitute your own values.
+Each course attendee will have their own unique parameters for use within the labs. The exercises use `green`{: .green} highlighting wherever you need to substitute your own values.
 
 You can find your server name by opening a Terminal on your server and typing 
 
@@ -70,7 +70,7 @@ You can find your server name by opening a Terminal on your server and typing
 
 ![Lab server desktop](../images/image015-2.png)
 
-Find the second line with the IP shown on the line that also contains mft-env ('mft-env' is the hostname of the server image we are using) and take a note of your server name and IP. For example in the screenshot above, the server name is **stockbroker**{: .green}  and the student number is **01**{: .green} . 
+Find the second line with the IP shown on the line that also contains mft-env ('mft-env' is the hostname of the server image we are using) and take a note of your server name and IP. For example in the screenshot above, the server name is `stockbroker`{: .green}  and the student number is `student01`{: .green} . 
 
 Alternatively you can ask your instructor for your server name and student number and you may also have received them earlier.
 
