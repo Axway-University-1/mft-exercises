@@ -8,17 +8,9 @@ title: SecureTransport File Flows
 
 
 
-| Workbook Version | 1.8 |
+| ST Update | May 2026 |
 | ---- | ---- |
-| Issued | July 2026 |
-| ST Server Updated | May 2026 |
-| Written by | Annie Yotova |
-
-Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you will learn how to build, manage, and troubleshoot SecureTransport file transfer flows using user accounts, subscriptions, transfer sites, advanced routing, PGP encryption, shared folders, compression, and adhoc transfers.
-
-
-
-
+| Exercise Update | October 2026 |
 
 ---
 
