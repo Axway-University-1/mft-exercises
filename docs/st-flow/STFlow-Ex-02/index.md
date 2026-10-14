@@ -8,18 +8,9 @@ title: SecureTransport File Flows
 
 
 
-| Workbook Version | 1.8 |
+| ST Update | May 2026 |
 | ---- | ---- |
-| Issued | July 2026 |
-| ST Server Updated | May 2026 |
-| Written by | Annie Yotova |
-
-Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you will learn how to build, manage, and troubleshoot SecureTransport file transfer flows using user accounts, subscriptions, transfer sites, advanced routing, PGP encryption, shared folders, compression, and adhoc transfers.
-
-
-
-
-
+| Exercise Update | October 2026 |
 
 
 ---
@@ -28,7 +19,7 @@ Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you wi
 
 ### About This Exercise
 
-We'll introduce you to the training environment and then get you started by creating your first account, along with your first file transfer.
+In this exercise you will connect to your training SecureTransport server and will learn how to create our first transfer. In this case will implement the easiest possible scenario: a user will login into the server and upload a file. As an admin of the system, you will learn how to check the status of this transfer. In subsequent exercises will will learn how to process this file. 
 
 ---
 
@@ -70,7 +61,7 @@ Hovering over any of the menus while they are not expanded will show you a toolt
 
 In this task, you will create a SecureTransport user.
 
-> **NOTE:** The table below assumes you are student `01`. As every student has their own mail server, you can substitute your own number where appropriate or you can use 01 throughout the class. Please name your account **John** as shown below. If you use a different name, remember it and use it any time the instructions in later exercises refer back to this account.
+> **NOTE:** Please name your account **John** as shown below. If you use a different name, remember it and use it any time the instructions in later exercises refer back to this account. You can use your student number instead of `student01`{: .green} below as well.
 
 | Field | Value |
 | --- | --- |
@@ -109,7 +100,7 @@ Add the following attributes (click *Add Attribute* for each, then click the che
 
    ![Account attributes continued](../images/image025.png)
 
-5. Click *Save* (make sure you save each additional attribute separately by clicking the checkmark next to the attribute)
+5. Click *Save* (make sure you save each additional attribute separately by clicking the checkmark next to the attribute before clicking the Save button)
 
 6. Click *Close*
 
@@ -123,7 +114,7 @@ Add the following attributes (click *Add Attribute* for each, then click the che
 
 3. Enter `John` in the *Search* field
 
-   (We realise this is unnecessary in our lab as this is the first account on the system. However, we are showing you how to find your account when you may have thousands of accounts built)
+   (This is unnecessary in our lab as this is the first account on the system. However, we are showing you how to find your account when you may have thousands of accounts already built)
 
    ![Search account](../images/image029.png)
 
@@ -165,7 +156,7 @@ In this task, you will connect to your SecureTransport server as the user John, 
 
 5. Click *Sign In*
 
-6. Click *Upload* and select a file to upload (any file will do)
+6. Click *Upload* and select a file to upload (any file will do; if you pick a large file, this upload may take awhile)
 
    ![Upload file](../images/image037.png)
 
