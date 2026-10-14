@@ -51,7 +51,7 @@ We will modify the following pre-existing objects:
 
 3. Click *+ Add New Route*
 
-4. Call the Route `SR_compress`
+4. Call the Route `SR_compress` and select "Execute the route when the condition is met". This will open a new field called *Expression Language* allowing you to enter the condition for the route.
 
 5. In the *Expression Language* field, add the following condition:
 
@@ -70,13 +70,13 @@ We will modify the following pre-existing objects:
 | `.+` | Matches any symbol one or more times |
 | `\\.` | Escaped dot character (usually the start of an extension) |
 
-6. Add the *Compress* step and uncheck *Compress All files into a single archive*
+6. Add the *Compress* step and uncheck *Compress All files into a single archive*. Set the Flow drop down to "Stop on Failure". Leave all the other values unchanged.
 
    ![Compress step](../images/image135.png)
 
-7. Save the step (Save Draft)
+7. Press *Save Draft*.
 
-8. Add a *Send to Partner* step to transmit the file to your partner (Instructor)'s site
+8. Add a *Send to Partner* step to transmit the file to your partner (Instructor)'s site. As a reminder, you can start typing the name of the account to bring it up and then select the site from the dropdown that will be populated. Don't forget to tell the step to stop on failure. 
 
    ![Send to partner](../images/image137.png)
 
@@ -84,7 +84,7 @@ We will modify the following pre-existing objects:
 
    ![Route overview](../images/image139.png)
 
-10. Click *Save Template*, then *Close*
+10. Click *Save Template*. As we are continuing to update this template in the next task, do not close it yet. 
 
 ---
 
@@ -92,7 +92,7 @@ We will modify the following pre-existing objects:
 
 The new template knows what to do with TXT files but if a non-text file arrives, it has no matching logic. So let's add a new route to handle these files. 
 
-1. Open the template you created in the previous task
+1. If you closed it in the last step of the previous task, open the template you created in the previous task. You should be seeing this screen:
 
    ![Template list](../images/image141.png)
 
@@ -102,11 +102,11 @@ The new template knows what to do with TXT files but if a non-text file arrives,
 
 4. Leave *Always execute this route* selected (default). Make sure that you do not accidentally move this route before the previous one in the table or it will catch all files. 
 
-5. Add a *Send to Partner* Step (Click *+Step*) to send the file to your partner (Instructor)'s site.
+5. Add a *Send to Partner* Step (Click *+Step*) to send the file to your partner (Instructor)'s site. Don't forget to tell the step to stop on failure.
 
    ![Second route send to partner](../images/image143.png)
 
-6. Press *Save Draft* and *Save Template*
+6. Press *Save Draft* and *Save Template*. This should leave you in the Template Edit page:
 
    ![Two routes](../images/image145.png)
 
@@ -118,9 +118,9 @@ The new template knows what to do with TXT files but if a non-text file arrives,
 
 We cannot modify the existing route package because we cannot change which template is used by a route package. As we created a new template, we need to create a new composite route package.
 
-1. Go to the "Routes" tab under the account. 
+1. Go to the "Routes" tab under the Manufacturing account. 
 
-2. Assign the *To Instructor Compress* template
+2. Create a new composite route package by selecting the newly created *To Instructor Compress* template and pressing "+ Assign Route".
 
    ![Assign compress route](../images/image147.png)
 
@@ -147,5 +147,7 @@ We cannot modify the existing route package because we cannot change which templ
    ![Received file flows](../images/image151.png)
 
 > Note that the extension `.zip` is automatically added to the filename after the text file is compressed. Any other file is not compressed – it uses the second simple route and is transmitted without change.
+
+The scenario worked as expected but looking at the setup, we added exactly the same step in two different places - in each of the two conditional steps. Can we optimize this setup so that we add the step only once? Let's explore this in the next excercise.
 
 ---
