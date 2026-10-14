@@ -7,16 +7,9 @@ title: SecureTransport File Flows
 # SecureTransport File Flows
 
 
-
-| Workbook Version | 1.8 |
+| ST Update | May 2026 |
 | ---- | ---- |
-| Issued | July 2026 |
-| ST Server Updated | May 2026 |
-| Written by | Annie Yotova |
-
-Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you will learn how to build, manage, and troubleshoot SecureTransport file transfer flows using user accounts, subscriptions, transfer sites, advanced routing, PGP encryption, shared folders, compression, and adhoc transfers.
-
-
+| Exercise Update | October 2026 |
 
 
 ---
@@ -25,11 +18,30 @@ Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you wi
 
 ### About This Exercise
 
-In this exercise, we will route files based upon FILENAME. The Manufacturing application transmits large text-based design documents that need to be compressed. All text files will have a filename extension of `.txt`.
+In all the exercises so far we were routing files based on where they were uploaded. In this exercise, we will implement a more complex scenario: we will process files differently based on their FILENAME. 
+
+The Manufacturing application had requested their files to be handled differently going forward - as they are starting to transmit large text-based design documents, they want these to be compressed while all other files need to be sent as they are received. Their partner had also asked them to stop including the date and time in the filenames. Only the files with a filename extension of `.txt` are considered text files for this request.
+
+### High Level Solution
+
+As this is a request for a change in an existing setup, one of the important decisions that need to be made during the design phase is which objects are to be changed and which ones need to remain as they are. As the previous exercise built the template and the transfer site to be reusable, we are not going to change them here (as the optional task demonstrated, they can be already reused by other applications). 
+
+We will reuse the following objects with no changes:
+1. The Manufacturing account itself to receive the files. 
+2. The Instructor's Transfer site which is used send the files to the partner.
+3. The Advanced Routing application.
+
+We will need to build the following new objects:
+1. A new template route which contains the routes handling the optional compression and the sending of the data. 
+2. A new composite route package which uses the new template. 
+
+We will modify the following pre-existing objects:
+1. The Subscription in the Manufacturing account in the /toInstructor folder to use a different route.
+
 
 ---
 
-### Task 1: Create a New Route Template
+### Task 1: Create a New Route Template with a Route for Compressing the TXT files
 
 1. Create a new Route Template called `To Instructor Compress`
 
@@ -47,7 +59,9 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
    ${transfer.target.matches('.*\\.txt')}
    ```
 
-**Regular expression cheat sheet:**
+*transfer.target* is a special variable that contains the name of the file entering processing. We will work more with variables and expressions later in the class. For more information, check the inline help in your ST server or the Admin Guide online. 
+
+**Quick regular expression cheat sheet:**
 
 | Symbol | Meaning |
 | --- | --- |
@@ -62,7 +76,7 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 7. Save the step (Save Draft)
 
-8. Add a *Send to Partner* step to transmit the file to your Instructor
+8. Add a *Send to Partner* step to transmit the file to your partner (Instructor)'s site
 
    ![Send to partner](../images/image137.png)
 
@@ -76,6 +90,8 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 ### Task 2: Create a Second Route
 
+The new template knows what to do with TXT files but if a non-text file arrives, it has no matching logic. So let's add a new route to handle these files. 
+
 1. Open the template you created in the previous task
 
    ![Template list](../images/image141.png)
@@ -84,9 +100,9 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 3. Provide a name for the new route – i.e. `SR_Send to Instructor`
 
-4. Leave *Always execute this route* selected (default)
+4. Leave *Always execute this route* selected (default). Make sure that you do not accidentally move this route before the previous one in the table or it will catch all files. 
 
-5. Add a *Send to Partner* Step (Click *+Step*)
+5. Add a *Send to Partner* Step (Click *+Step*) to send the file to your partner (Instructor)'s site.
 
    ![Second route send to partner](../images/image143.png)
 
@@ -98,33 +114,35 @@ In this exercise, we will route files based upon FILENAME. The Manufacturing app
 
 ---
 
-### Task 3: Edit Your Manufacturing account and Add a new Route
+### Task 3: Add a New Route Package to Your Manufacturing Account
 
-1. Assign the *To Instructor Compress* template
+We cannot modify the existing route package because we cannot change which template is used by a route package. As we created a new template, we need to create a new composite route package.
+
+1. Go to the "Routes" tab under the account. 
+
+2. Assign the *To Instructor Compress* template
 
    ![Assign compress route](../images/image147.png)
 
-2. Provide a route name such as `PR Compress Text Files to Instructor`
+3. Provide a route name such as `PR Compress Text Files to Instructor`
 
-3. Save the new Route
+4. Save the new Route
 
 ---
 
-### Task 4: Edit Your Subscription to Point to the New Route
+### Task 4: Edit the Subscription in the Your Manufacturing Account to Point to the New Route
 
-1. In the `/toInstructor` subscription, change the route to the one you just created and save the subscription
+1. In the `/toInstructor` subscription of the Manufacturing account, change the route to the one you just created and save the subscription
 
    ![Subscription route change](../images/image149.png)
 
 ---
 
-### Task 5: Ask The Manufacturing Application to send test files
+### Task 5: Test your scenario
 
-1. Remember that your instructor is the manufacturing application
+1. You can ask your instructor to send files to the Your Manufacturing account or you can login into the account and upload files in the toInstructor folder. You need both files with an extension `.txt` and ones with a different or no extension to test your setup completely. If you decide to upload your own files, there are some files to use in (Update folder when the RT environment is available. )
 
-2. Ask your instructor to send both a `.txt` file and a file with a different extension. Remind them of your server name.
-
-3. Check the file flows for each of the received files
+2. Check the file flows for each of the received files
 
    ![Received file flows](../images/image151.png)
 

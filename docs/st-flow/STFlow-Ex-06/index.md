@@ -18,18 +18,18 @@ title: SecureTransport File Flows
 
 ### About This Exercise
 
-In this exercise, you will simulate a real-world use case. Your internal application called *Manufacturing* will transmit files to SecureTransport, which will then be sent to a remote partner (your instructor's server). In addition we want to make this action repeatable so that additional applications can reuse the logic later. 
+In this exercise, you will simulate a real-world use case. Your internal application called *Manufacturing* will transmit files to SecureTransport, which will then be sent to a remote partner (your instructor's server). In addition we want to make this setup reusable so that other internal applications can send files to your partner as well with mininal configuration.
 
 ### High Level Solution
 
 In order to achieve this, we will need to create the following objects in SecureTransport
 1. An Account called *Manufacturing* which will represent the internal application. 
-2. An Account called *Instructor* which will represent the partner we are sending the files to. This account will not login into ST for this scenario it but will hold all the information we need for us to connect to their server. 
+2. An Account called *Instructor* which will represent the partner we are sending the files to. This account will not login into ST for this scenario but it will hold all the information we need for ST to connect to their server. 
 3. A Transfer site inside of the *Instructor* account to allow us to connect to their server. 
-4. A Route Template which implements the business logic (send the file to the partner)
+4. A Route Template which implements the business logic (send the file to the partner after renaming it based on the partner's request).
 5. An Advanced Routing application
 6. A Composite Route Package in the *Manufacturing* account which uses the template route we just created
-7. A subscription in the *Manufacturing* account to determine which files are send to Instructor. 
+7. A subscription in the *Manufacturing* account to determine which files are sent to Instructor. 
 
 We are not going to reuse any of the objects we created in earlier exercises. 
 
@@ -56,6 +56,7 @@ We are not going to reuse any of the objects we created in earlier exercises.
 | GID | 7000 |
 | Home Directory | `/usrdata/NoBU/Instructor` |
 | Password | axway |
+
 You can also leave this user without an ability to login onto ST. You can create this user by following the usual "New Account" process or you can duplicate the Manifacturing account. Don't forget to enable the account if you create it via the duplication process.
 
 ---
@@ -188,5 +189,10 @@ Now you are ready to receive files from the Manufacturing application and proces
 3. You can also verify that all route steps were successful by clicking on the filename of the inbound file in the File Tracking table.
    ![Transfer details](../images/image131.png)
    ![Route steps success](../images/image129.png)
+
+
+### Task 8: (Optional) Reuse the Existing Setup
+
+The setup was created to allow both the Instructor Transfer site and the Template route to be reused. When a new team, NewProduct, requires to send files to the same partner, what elements do you need to create for them and which elements can you reuse from what we built for Manufacturing? Try to build the NewProduct scenario. 
 
 ---
