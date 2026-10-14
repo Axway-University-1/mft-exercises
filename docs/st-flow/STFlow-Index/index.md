@@ -1,4 +1,5 @@
 Please use the links below to access the exercises for each day of the training. These links will open in your browser.
+Happy learning!
 
 Exercise 1 - Introduction to the Environment<br>
 [https://axway-university-1.github.io/mft-exercises/st-flow/STFlow-Ex-01/](https://axway-university-1.github.io/mft-exercises/st-flow/STFlow-Ex-01/)
