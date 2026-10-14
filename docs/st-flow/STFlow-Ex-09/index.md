@@ -7,15 +7,9 @@ title: SecureTransport File Flows
 # SecureTransport File Flows
 
 
-
-| Workbook Version | 1.8 |
+| ST Update | May 2026 |
 | ---- | ---- |
-| Issued | July 2026 |
-| ST Server Updated | May 2026 |
-| Written by | Annie Yotova |
-
-Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you will learn how to build, manage, and troubleshoot SecureTransport file transfer flows using user accounts, subscriptions, transfer sites, advanced routing, PGP encryption, shared folders, compression, and adhoc transfers.
-
+| Exercise Update | October 2026 |
 
 
 ---
@@ -30,7 +24,7 @@ The Human Resources department wishes to send a single zip file to their partner
 
 ### Task 1: Create an HR account
 
-1. Create an account with the name `HR` and password `axway`
+1. Create an account with the name `HR` and password `axway`. Fill in the rest of the fields (UID, GID and home folder) similarly to how we did that in the previous exercises. 
 
    ![HR account](../images/image163.png)
 
