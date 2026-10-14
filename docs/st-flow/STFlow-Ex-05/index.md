@@ -8,16 +8,9 @@ title: SecureTransport File Flows
 
 
 
-| Workbook Version | 1.8 |
+| ST Update | May 2026 |
 | ---- | ---- |
-| Issued | July 2026 |
-| ST Server Updated | May 2026 |
-| Written by | Annie Yotova |
-
-Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you will learn how to build, manage, and troubleshoot SecureTransport file transfer flows using user accounts, subscriptions, transfer sites, advanced routing, PGP encryption, shared folders, compression, and adhoc transfers.
-
-
-
+| Exercise Update | October 2026 |
 
 
 ---
@@ -26,7 +19,13 @@ Welcome to the SecureTransport File Flows Lab! In this hands-on workbook, you wi
 
 ### About This Exercise
 
-In this exercise, you will create a shared folder application that will allow two accounts to share content without being able to see each other's entire directory structure.
+In this exercise, you will create a shared folder application that will allow two accounts to share content without being able to see each other's entire directory structure and without the need for each user to have their own copy of the files. Very often these folders are also shared with external applications as well. 
+
+### High Level Solution
+
+To achieve our goal, we will need to create the following objects:
+1. A Shared Folder Application to indicate which folder we want to share between the different accounts
+2. 2 new user accounts. In the last exercise we disabled John's ability to login. You can reenable it and use John as one of the two users but the instructions below are using two new users. 
 
 ---
 
@@ -42,7 +41,7 @@ In this exercise, you will create a shared folder application that will allow tw
 
 2. Click *Add New*
 
-3. Enter the information from the table above
+3. Enter the information from the table above. 
 
    ![Shared folder application](../images/image103.png)
 
@@ -50,9 +49,7 @@ In this exercise, you will create a shared folder application that will allow tw
 
 ---
 
-### Task 2: Create User Accounts
-
-Create two accounts and subscribe them to the shared folder application.
+### Task 2: Create User Accounts and Subscribe Them to the application
 
 **Account 1**
 
@@ -82,7 +79,7 @@ Create two accounts and subscribe them to the shared folder application.
 
 1. Navigate to **Accounts → User Accounts**
 
-2. For each account, click *New Account* and enter the information above
+2. For each account, click *New Account* and enter the appropriate information above
 
 3. Click *Save*
 
@@ -96,7 +93,7 @@ Create two accounts and subscribe them to the shared folder application.
 
 8. Click *Add*
 
-> **NOTE:** Instead of creating the second account manually, you can duplicate it from the first (make sure you enable the second account after that, as *Duplicate* creates accounts in disabled mode).
+> **NOTE:** Instead of creating the second account manually, you can duplicate it from the first (make sure you enable the second account after that, as *Duplicate* creates accounts in disabled mode). Do not duplicate the John account because the process will recreate all the additional objects we added in the previous exercises.
 
 ---
 
@@ -106,7 +103,7 @@ Create two accounts and subscribe them to the shared folder application.
 
 2. Log in as *user1*
 
-3. Navigate into the *project1-share* folder
+3. Navigate to the *project1-share* folder
 
 4. Click *Upload*
 
@@ -116,13 +113,13 @@ Create two accounts and subscribe them to the shared folder application.
 
 7. Log in as *user2*
 
-8. Navigate into the *project1-share* folder
+8. Navigate to the *project1-share* folder
 
 9. Verify user2 sees the file user1 uploaded
 
-10. Click on the file in the *Name* column to download
+10. Click on the file name in the *Name* column to download
 
-11. Verify the file was downloaded. Your tracking table should look something like this:
+11. Verify the file was downloaded as an Admin. Your tracking table should look something like this:
 
     ![Shared folder tracking](../images/image105.png)
 
