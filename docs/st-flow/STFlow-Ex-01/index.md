@@ -16,7 +16,7 @@ title: SecureTransport File Flows
 
 ### About This Exercise
 
-In this exercise, you will be introduced to the SecureTransport environment which will be used during this class and you will learn how to use the system.
+In this exercise, you will be introduced to the SecureTransport training environment which will be used during this class and you will learn how to use the system.
 
 ---
 
