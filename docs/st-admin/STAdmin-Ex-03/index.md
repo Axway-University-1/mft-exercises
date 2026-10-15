@@ -4,20 +4,12 @@ title: SecureTransport Basic Administration
 ---
 
 # Axway University
-# SecureTransport Installation – Rocky Linux 9
-
-*Copyright © Axway 2026. All Rights Reserved.*
+# SecureTransport Basic Administration
 
 
-| Average time required to complete this lab | 60 minutes    |
+| ST Update | May 2026 |
 | ---- | ---- |
-| Lab last updated | May 2026 |
-| Lab last tested | May 2026 |
-
-Welcome to the SecureTransport Administration Lab! In this hands-on session, we'll ........
-
-
-
+| Exercise Update | October 2026 |
 
 ---
 
@@ -50,7 +42,7 @@ In the absence of any other information, let's leave 4Gb to the Operating System
 | SFTP | 3Gb | Main protocol, usage expected to increase |
 | HTTP | 1Gb | Used much less frequently |
 
-> **NOTE:** You do not need to allocate all your available memory but ST cannot use memory that has not been allocated.
+> **NOTE:** You do not need to allocate all your available memory but ST cannot use memory that has not been allocated. If your admin UI appears slow or sluggish, add another Gb of memory.
 
 ![top command output](images/image49.png)
 
@@ -93,7 +85,7 @@ ps -ef | grep Secure
 ```
 
 > **NOTE:** For complete tuning of your system, please consult the following Support article:
-> https://support.axway.com/kb/191062/
+> [https://support.axway.com/kb/191062/](https://support.axway.com/kb/191062/)
 
 ---
 

@@ -22,7 +22,8 @@ In the previous exercises, we had a human logging into ST to upload a file. Now 
 
 ### High Level Solution
 
-In order to achieve our goal, we need to create the following objects:
+To implement the solution, we will create the following objects:
+
 1. An account which will be used to start the process and then deliver the file to its final destination. In this exercise we will use the account we already created: *John*. As the process will be fully automated, we do not need John to be able to login so we will modify the account to achieve that.
 2. A Transfer Site to connect to the partner's server. As we already know how to connect to the instructor server, we will use the site *Instructor* that we used in the previous exercise.
 3. A Transfer Site which will represent the recipient (in this case the folder we want to drop the file into)
