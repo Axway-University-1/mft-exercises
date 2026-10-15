@@ -4,11 +4,12 @@ title: SecureTransport Basic Administration
 ---
 
 # Axway University
-# SecureTransport Installation – Rocky Linux 9
+# SecureTransport Basic Administration
 
 
-
-Welcome to the SecureTransport Basic Administration Lab! In this hands-on session, we will prepare our environment for an installation. You will rarely need to do this process on a production server but it is a common operation on a test server.
+| ST Update | May 2026 |
+| ---- | ---- |
+| Exercise Update | October 2026 |
 
 
 

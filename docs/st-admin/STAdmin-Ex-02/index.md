@@ -4,21 +4,12 @@ title: SecureTransport Basic Administration
 ---
 
 # Axway University
-# SecureTransport Installation – Rocky Linux 9
-
-*Copyright © Axway 2026. All Rights Reserved.*
+# SecureTransport Basic Administration
 
 
-| Average time required to complete this lab | 60 minutes    |
+| ST Update | May 2026 |
 | ---- | ---- |
-| Lab last updated | May 2026 |
-| Lab last tested | May 2026 |
-
-Welcome to the SecureTransport Administration Lab! In this hands-on session, we'll ........
-
-
-
-
+| Exercise Update | October 2026 |
 
 ---
 
