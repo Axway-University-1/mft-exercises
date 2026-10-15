@@ -33,7 +33,7 @@ Plugins.Authentication.admin-ldap-authentication-plugin
 ```
 ![Server config authentication plugin](images/image51.png)
 Add a name for your plugin profile (for example `Default`). Note that the parameter names shown in the table below are based on the profile name you specified. If you decide to use a different name, replace **Default** in the variable names with the profile name you selected.
-
+<br>
 | Parameter | Value |
 | --- | --- |
 | `Plugins.Authentication.admin-ldap-authentication-plugin.Default.ldapConnectionType` | `normal` |
@@ -47,7 +47,7 @@ Add a name for your plugin profile (for example `Default`). Note that the parame
 | `Plugins.Authentication.admin-ldap-authentication-plugin.Default.ldapBindPassword` | `axway` |
 | `Plugins.Authentication.admin-ldap-authentication-plugin.Default.ldapAuthenticationBindTyp` | `admin` |
 | `Plugins.Authentication.admin-ldap-authentication-plugin.Default.ldapSearchFilter` | `sn=${authn.loginname}` |
-
+<br>
 Your LDAP server configuration is now complete. The next step is to enable the plugin.
 
 Edit *Plugins.Authentication.Admin.Registry*:
