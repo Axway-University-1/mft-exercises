@@ -29,7 +29,7 @@ Add a name for your plugin profile (for example `Default`). Note that the parame
 
 
 | Parameter | Value |
-| --- | --- |
+| ---- | ---- |
 | Plugins.Authentication.admin-ldap-authentication-plugin.Default.ldapConnectionType | `normal` |
 | Plugins.Authentication.admin-ldap-authentication-plugin.Default.ldapHost | `axwaydemo.com` |
 | Plugins.Authentication.admin-ldap-authentication-plugin.Default.ldapServerName` | `axwaydemo.com` |
