@@ -140,7 +140,7 @@ We cannot modify the existing route package because we cannot change which templ
 
 ### Task 5: Test your scenario
 
-1. You can ask your instructor to send files to the Your Manufacturing account or you can login into the account and upload files in the toInstructor folder. You need both files with an extension `.txt` and ones with a different or no extension to test your setup completely. If you decide to upload your own files, there are some files to use in (Update folder when the RT environment is available. )
+1. You can ask your instructor to send files to the Your Manufacturing account or you can login into the account and upload files in the toInstructor folder. You need both files with an extension `.txt` and ones with a different or no extension to test your setup completely. If you decide to upload your own files, there are some files to use in the different subfolders of `STSOURCE`
 
 2. Check the file flows for each of the received files
 

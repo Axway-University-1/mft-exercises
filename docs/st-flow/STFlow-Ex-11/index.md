@@ -55,7 +55,7 @@ The routes will be built in the accounts which see the files first: the decrypti
 | Account Name | EX11PGP |
 | UID | 7001 |
 | GID | 7000 |
-| Home Directory | `/usrdata/NoBU` |
+| Home Directory | `/usrdata/NoBU/EX11PGP` |
 | Password | axway |
 
 ---
@@ -120,7 +120,7 @@ Earlier in the class we created the *TS_SFTP_Instructor* site in the *Instructor
 
    ![Username change](../images/image208.png)
 
-> The expression in the upload folder will allow us to use a subscription parameter to specify the folder where we want to upload a file. This will allow us to use the same site both for the keys exchange and for the actual data later. 
+> The expression in the upload folder will allow us to use a subscription parameter to specify the folder where we want to upload a file. This will allow us to use the same site both for the keys exchange and for the actual data later. The checkbox *Allow Upload Folder Overwrite* allows the folder to be overwritten from a Send To Partner step giving us even more flexibility.
 
 ---
 
@@ -138,7 +138,7 @@ Earlier in the class we created the *TS_SFTP_Instructor* site in the *Instructor
 
    ![Export public key](../images/image220.png)
 
-4. Select *Export*. Do NOT select *Export private key* (you do not want to share your private key with other people)
+4. Select *Export*. Do NOT select *Export private key* on the next screen (you do not want to share your private key with other people)
 
    ![Export options](../images/image221.png)
 
@@ -274,6 +274,7 @@ This will move the unencrypted file into the archive folder so we can use it for
     ![Publish to account](../images/image228.png)
 
 Save the step, the route and the template. 
+
 ---
 
 ### Task 13: Create the Subscription in the EX11PGP account 
@@ -288,9 +289,9 @@ Save the step, the route and the template.
 
 ### Task 14: Now send a file
 
-1. Login to the user interface with your `PGPInternal` account and upload a file in the `/EncryptandSendToInstructor` folder.
+Login to the user interface with your `PGPInternal` account and upload a file in the `/EncryptandSendToInstructor` folder.
 
-This test will not be the usual process in which you send an order and receive back an invoice. Instead the vendor will decrypt the order file, re-encrypt it with your public key and send it back to you so you can validate that the file you received is the same as the file you transmitted.
+This test will not be the usual process in which you send an order and receive back an invoice. Instead the partner will decrypt the order file you sent, re-encrypt it with your public key and send it back to you so you can validate that the file you received back is the same as the file you transmitted.
 
 Remember that you archived the outgoing file in `/EncryptandSendtoInstructor/archive` and received the decrypted version in `/Decrypted`. If everything was created properly, you should have identical files in both folders.
 

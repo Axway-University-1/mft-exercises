@@ -18,7 +18,7 @@ title: SecureTransport File Flows
 
 ### About This Exercise
 
-The Human Resources department wishes to send a single zip file to their partner each day. The HR department will initiate the final transmission by uploading a file called `trigger.me`. Any file uploaded by HR that does NOT end with `.txt` should NOT be part of the archive and should be placed into another directory for analysis by the HR team. 
+The Human Resources department produces a lot of text files through the day and need to send them to their partner. However, instead of sending the files one by one, they want all the files to be zipped and sent as a single archive. The HR department will initiate the final transmission by uploading a file called `trigger.me`. Any file uploaded by HR that does NOT end with `.txt` should NOT be part of the archive and should be placed into another directory for analysis by the HR team. 
 
 ### High Level Solution
 

@@ -18,7 +18,7 @@ title: SecureTransport File Flows
 
 ### About This Exercise
 
-The Manufacturing application owner does not have any requests for changes but in reviewing your setup, you realized that you did not reuse the Send To Partner step in your prevuous template. Let's optimize the setup so if you need to change the Send To Partner parameters, you do not need to do that in two different places. 
+The Manufacturing application owner does not have any requests for changes but in reviewing your setup, you realized that you did not reuse the Send To Partner step in your previous template. Let's optimize the setup so if you need to change the Send To Partner parameters, you do not need to do that in two different places. 
 
 ### High Level Solution
 
