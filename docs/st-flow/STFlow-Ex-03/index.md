@@ -20,6 +20,14 @@ title: SecureTransport File Flows
 
 In the prior exercise, we simply uploaded a file to the John account. Now we'll add the other components needed to create a complete file flow – the file will be transmitted to another system upon its upload to ST.
 
+### High Level Solution
+
+To implement the solution, we will create the following objects:
+
+1. An application which will be used for all simple file flows.
+2. A Transfer Site to connect to the partner's server. 
+3. A subscription which will specify which files need to be processed
+
 ---
 
 ### Task 1: Create the Basic Application

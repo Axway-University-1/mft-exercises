@@ -19,7 +19,7 @@ title: SecureTransport File Flows
 
 ### About This Exercise
 
-In this exercise you will connect to your training SecureTransport server and will learn how to create our first transfer. In this case will implement the easiest possible scenario: a user will login into the server and upload a file. As an admin of the system, you will learn how to check the status of this transfer. In subsequent exercises will will learn how to process this file. 
+In this exercise you will connect to your training SecureTransport server and will learn how to create our first transfer. In this case we will implement the easiest possible scenario: a user will login into the server and upload a file. As an admin of the system, you will learn how to check the status of this transfer. In subsequent exercises we will learn how to process this file. 
 
 ---
 

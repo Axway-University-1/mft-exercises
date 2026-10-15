@@ -23,7 +23,8 @@ In this exercise, we want to allow two accounts to share content without being a
 
 ### High Level Solution
 
-To achieve our goal, we will need to create the following objects:
+To implement the solution, we will create the following objects:
+
 1. A Shared Folder Application to indicate which folder we want to share between the different accounts
 2. Two new user accounts. In the last exercise we disabled John's ability to login. You can reenable it and use John as one of the two users but the instructions below are using two new users. 
 

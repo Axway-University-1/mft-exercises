@@ -22,7 +22,8 @@ In this exercise, you will simulate a real-world use case. Your internal applica
 
 ### High Level Solution
 
-In order to achieve this, we will need to create the following objects in SecureTransport
+To implement the solution, we will create the following objects:
+
 1. An Account called *Manufacturing* which will represent the internal application. 
 2. An Account called *Instructor* which will represent the partner we are sending the files to. This account will not login into ST for this scenario but it will hold all the information we need for ST to connect to their server. 
 3. A Transfer site inside of the *Instructor* account to allow us to connect to their server. 

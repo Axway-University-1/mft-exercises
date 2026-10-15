@@ -46,7 +46,7 @@ This account will be used to send emails to our support organisation for any fil
 
 1. Create the UNKNOWN account providing the required parameters (UID, GID, home folder and password) similarly to the accounts we created earlier.
 
-2. Before saving the account, make sure the *Home folder Access Level* is set to **public** so that any other account can send files here. The field is immeditiately under the *Home Folder* field. 
+2. Before saving the account, make sure the *Home folder Access Level* is set to **public** so that any other account can send files here. The field is immediately under the *Home Folder* field. 
 
    ![Public home folder](../images/image188.png)
 
@@ -80,7 +80,7 @@ Use the Advanced Routing Application.
 
    ![UNKNOWN subscription](../images/image190.png)
 
-3. Press "Add". Note that unlike any other subscription we built so far, we do not want the file to be deleted on successful routing.
+3. Press "Add". Note that unlike any other subscription we built so far, we do not want the file to be deleted on successful routing. The success here is the route triggering and all the route does is sending an email. 
 
 ---
 
@@ -171,19 +171,23 @@ If you reinstalled SecureTransport as part of your class, the mail server is not
 
 ### Task 12: Receive and Process the Files
 
-1. Initiate the flow by submitting files yourself or ask your instructor to send you a zip file. Files are located in `STSOURCE/EX10`.
+1. Initiate the flow by submitting files yourself or ask your instructor to send you a zip file. Files are located in `STSOURCE/EX10`. Create a zip that contains the types of files that you need and upload it in the folder. If you want to, you can even use ST to do that (Hint: we did an exercise that creates a zip file from multiple files)
 
    ![Receive files](../images/image200.png)
 
 2. Check your email at `https://mft-env:10033`
 
-3. Login to the demo web mail server as `studentxx` / password `studentxx` (where `xx` is your student number)
+3. Login to the demo web mail server as `student01` / password `student01` 
 
-4. You will see the email:
+4. You will see this email:
 
    ![Email received](../images/image201.png)
 
 > If you do not see the email, inspect your ST server logs, resolve any errors, then execute your flow again.
+
+### Task 13: (Bonus) User Error Handling
+
+The exercise expects that the user will always send an archive. Try to upload a file that is not a zip file and see what happens. Can you change the route template to handle this case and to send the file to the *UNKNOWN* account? Make sure that if the partner sends a file matching one of our expected patterns, the file still ends up in the *UNKNOWN* account.
 
 ---
 
