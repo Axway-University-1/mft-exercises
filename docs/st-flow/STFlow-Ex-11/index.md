@@ -72,9 +72,9 @@ SecureTransport will create any subscription directory that does not exist when 
 
 ### Task 3: Ask your instructor to transmit his/her PGP public key to you
 
-Use the tracking table to discover where it is on the file system.
+Use the File Tracking table to discover where it is on the file system. As in this lab the browser we are using is on the same OS as the ST server, we can use that location to import the key from in the next exercise.
 
-As this is a training class, you can also login as the `EX11PGP` and download the file to a different location. In the real world you will not have access to that account's credentials. 
+As this is a training class, you can also login as the `EX11PGP` account and download the file to a different location. In the real world you will not have access to that account's credentials. Instead you will need to set the subscription for this folder in a way that puts the key where you can have access. The bonus Task 15 at the end of this exercise will give you a chance to design this process if you wish to do so.
 
 ---
 
@@ -296,5 +296,11 @@ This test will not be the usual process in which you send an order and receive b
 Remember that you archived the outgoing file in `/EncryptandSendtoInstructor/archive` and received the decrypted version in `/Decrypted`. If everything was created properly, you should have identical files in both folders.
 
 Once this is verified, the communication is proven and now you can exchange actual orders and invoices. Do not forget to clear up any archive copies you may not want to keep for actual files.
+
+---
+
+### Task 15: (Bonus) Receive partner's key, part 2
+
+In Task 3, we grabbed the file from the File system directly. In the real world you do not always have access. How would you change the setup for the receiving of the keys so that the received key either ends up in the PGPInternal account (which you can download from) or in another location where you have access to?
 
 ---
