@@ -31,7 +31,7 @@ In this exercise you will connect to your training SecureTransport server and wi
 
    ![SecureTransport admin login](../images/image017.png)
 
-3. In the *User ID* and *Password* fields enter `admin`
+3. In the *User ID* field enter `admin` and use the default admin password.
 
 > **NOTE:** If you took the Basic Admin class and kept your server, use the password you changed the admin password to.
 
