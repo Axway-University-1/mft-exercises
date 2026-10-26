@@ -31,9 +31,7 @@ In this exercise you will connect to your training SecureTransport server and wi
 
    ![SecureTransport admin login](../images/image017.png)
 
-3. In the *User ID* field enter `admin` and use the default admin password.
-
-> **NOTE:** If you took the Basic Admin class and kept your server, use the password you changed the admin password to.
+3. In the *User ID* field enter `admin` and use the default admin password. (If you took the Basic Admin class and kept your server, use the password you changed the admin password to).
 
 4. Click the *Sign in* button
 
@@ -61,7 +59,7 @@ Hovering over any of the menus while they are not expanded will show you a toolt
 
 In this task, you will create a SecureTransport user.
 
-> **NOTE:** Please name your account **John** as shown below. If you use a different name, remember it and use it any time the instructions in later exercises refer back to this account. You can use your student number instead of `student01`{: .green} below as well.
+> **NOTE:** Please name your account **John** as shown below. If you use a different name, remember it and use it any time the instructions in later exercises refer back to this account. 
 
 | Field | Value |
 | --- | --- |
@@ -86,6 +84,9 @@ Add the following attributes (click *Add Attribute* for each, then click the che
 | --- | --- |
 | ownerAccountEmail | student101@demo.axway.com |
 | supportAccountEmail | student201@demo.axway.com |
+
+> **NOTE:** Use these two emails exactly as shown.
+
 
 1. Connect to the SecureTransport administration UI at `https://mft-env:8444`
 
