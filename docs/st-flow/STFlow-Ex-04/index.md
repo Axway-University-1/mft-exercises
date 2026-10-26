@@ -79,7 +79,7 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 6. Enter `/tmp` in the upload directory. Leave all other values to their default settings.
 
-![Folder Monitor site Upload](../images/image083-2.png)
+   ![Folder Monitor site Upload](../images/image083-2.png)
 
 7. Click *Add* to save your Folder Monitor
 
@@ -91,7 +91,7 @@ This transfer site will be used to push files retrieved from your instructor's s
 
 2. Subscribe to the same application we used in the previous exercise: *BasicApp*
 
-3. Change the Subscription folder to be `/pulledFromInstructor`
+3. Change the Subscription Folder to be `/pulledFromInstructor`
 
 4. Select the *Automatically retrieve files from* box and click on the *Instructor* transfer site
 
