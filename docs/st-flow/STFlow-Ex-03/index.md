@@ -40,7 +40,7 @@ To implement the solution, we will create the following objects:
 
    ![Add new application](../images/image047.png)
 
-3. Select *Basic Application* from the application Type drop down menu
+3. Select *Basic Application* from the Application Type drop down menu
 
 4. Provide a name for your application i.e. `BasicApp`
 
@@ -76,7 +76,7 @@ Now, we will add the file transfer flow to the John account. We will still use t
 
 > **NOTE:** Use your **servername** as part of the upload folder – so if your server is `stockbroker`{: .green}, make the upload folder `fromStockbroker`{: .green} (use uppercase for the first letter of your servername).
 
-5. Save your site using the *Add* button. The result should look like this:
+Save your site using the *Add* button. The result should look like this:
    ![Add new transfer site](../images/image053.png)
 
 
@@ -145,11 +145,10 @@ Any files received in the `toInstructor` folder will be transmitted to the remot
 
 6. Click on the *toInstructor* folder to open it.
 
-7. Upload a file (any file will do)
+7. Upload a file (any file will do). Note that on success, the file is no longer visible in the upload folder.
 
    ![Upload to folder](../images/image071.png)
 
-Note that on success, the file is no longer visible in the upload folder.
 
 8. Click on the *Uploads monitor* button – you will see your file transfer
 
