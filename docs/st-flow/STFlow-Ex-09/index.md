@@ -69,7 +69,7 @@ The partner that needs to receive the files is the same one that received the fi
 
 12. Make sure that the step stops on failure and in the *Collision Settings* choose "Use a different file name to publish the file".  This will allow for a file to be sent to the folder even if a file with the same name is already there. Your setup should look like this:
 
-   ![Publish to account](../images/image171.png)
+    ![Publish to account](../images/image171.png)
 
 13. Save Draft.
 

@@ -148,7 +148,7 @@ Your key will be downloaded as `xxxxxxxx.asc`.
 
 ### Task 7: Create an 'Empty' Route Template if you do not have one
 
-You should already have one from exercise 10 but if you did not create it there, create a Route Template with the name 'Empty' and no routes. 
+You should already have one from exercise 10. If you skipped the exercise or modified the route, create a new Route Template with the name 'Empty' and no routes. 
 
 ---
 

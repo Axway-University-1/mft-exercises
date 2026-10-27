@@ -44,21 +44,19 @@ Editing route templates can be dangerous - you can see how many composite route 
 
 7. Press "Save Draft"
 
-8. Add a *Send to Partner* Step
+8. Add a *Send to Partner* Step. Select *Stop on failure* in the *Flow* checkbox
 
-9. Select *Stop on failure* in the *Flow* checkbox
-
-10. Switch the *Files to process* radio box to *All available files*
+9. Switch the *Files to process* radio box to *All available files*.
 
    ![Files to process](../images/image155.png)
 
-11. "Save Draft", "Save Template", and "Close"
+10. "Save Draft", "Save Template", and "Close"
 
 ---
 
 ### Task 2: Create a New Route Package in the Manufacturing account
 
-1. Create the route package with the name `PR Ex8 Compress` in the account selecting the "Ex8 – Compress" as the template. Don't forget to press "Save".
+1. Create a route package with the name `PR Ex8 Compress` inside of the account, selecting the "Ex8 – Compress" we created earlier as the template. Don't forget to press "Save".
 
    ![Route package](../images/image157.png)
 
@@ -79,7 +77,7 @@ Editing route templates can be dangerous - you can see how many composite route 
 
    ![Transfer files](../images/image161.png)
 
-> Note how the end result is the same as with the previous exercise. If the files not ending in `.txt` were not sent, check that you changed *Files to process* in your Send To Partner step.
+> Note how the end result is the same as it was in  the previous exercise. If the files not ending in `.txt` were not sent, check that you changed *Files to process* in your Send To Partner step.
 
 ---
 
