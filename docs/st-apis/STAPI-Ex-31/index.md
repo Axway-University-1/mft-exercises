@@ -8,7 +8,7 @@ title: SecureTransport APIs
 
 | ST Update | January 2026 |
 | ---- | ---- |
-| Exercise Update | April 2026 |
+| Exercise Update | November 2026 |
 
 ---
 
