@@ -24,8 +24,8 @@ In this exercise, you will see how an end user can use APIs to transfer files. O
 
 2. Execute the script and check that your File Tracking looks something like:
 
-   ![File Tracking results](../images/image027.png)
+   ![File Tracking results](../images/image030.png)
 
-   ![Swagger UI response](../images/image045.png)
+   ![Swagger UI response](../images/image048.png)
 
 ---

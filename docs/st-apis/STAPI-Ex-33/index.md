@@ -46,7 +46,7 @@ In `~/STSOURCE/EX33`, the Python script `stConfigScan.py` uses the `/configurati
 
 1. Using the Admin UI, search for all *folder* parameters in the *Server Configuration*
 
-   ![Server Configuration search](../images/image041.png)
+   ![Server Configuration search](../images/image044.png)
 
 2. Change `FolderMonitor.pollInterval` from the default of 5 seconds to a much more reasonable value of `120`
 
@@ -56,7 +56,7 @@ In `~/STSOURCE/EX33`, the Python script `stConfigScan.py` uses the `/configurati
    python3 stConfigScan.py COMPAREBASELINE
    ```
 
-   ![Compare baseline output](../images/image043.png)
+   ![Compare baseline output](../images/image046.png)
 
 4. You should see something like the above, showing that the program has detected the change
 

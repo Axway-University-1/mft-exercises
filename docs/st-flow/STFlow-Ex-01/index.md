@@ -22,7 +22,7 @@ In this exercise, you will be introduced to the training environment which will 
 
 
 
-### Task 1: Access the Training Environment
+### Task : Access the Training Environment
 
 In this task, you will connect to the Axway/ReadyTech training environment and log into your training server.
 

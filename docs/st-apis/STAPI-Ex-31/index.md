@@ -77,7 +77,7 @@ Either run the script `stCreateAccount.sh` or use the Swagger UI with a copy of 
 
 2. Make a note of the Route Package Template ID
 
-   ![Route package template Location header](../images/image023.png)
+   ![Route package template Location header](../images/image025.png)
 
 ---
 
@@ -107,7 +107,7 @@ This glues all the components together and completes the flow setup. Note that t
 
 1. Before doing anything, edit the `stCreatePackageRoute.json` file and substitute the IDs for **your** subscription, route package template, and simple route
 
-   ![Package route JSON](../images/image025.png)
+   ![Package route JSON](../images/image028.png)
 
 2. Your simple route ID will be placed in the `executeRoute` key
 
@@ -121,6 +121,6 @@ This glues all the components together and completes the flow setup. Note that t
 
 2. Upload a test file and then confirm all is well using the Admin UI
 
-   ![File Tracking results](../images/image027.png)
+   ![File Tracking results](../images/image030.png)
 
 ---

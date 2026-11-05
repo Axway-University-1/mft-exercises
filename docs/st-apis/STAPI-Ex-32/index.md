@@ -26,7 +26,7 @@ The events API was added to SecureTransport in late 2022 and is a great way of d
 
 We have generated a certificate chain that will be used to authenticate the APIs.
 
-![Certificate chain](../images/image029.png)
+![Certificate chain](../images/image032.png)
 
 The root and intermediate CAs have been saved in PEM format as file `STSOURCE/EX32/ST_Basics_Intermediate.pem`
 
@@ -34,7 +34,7 @@ The root and intermediate CAs have been saved in PEM format as file `STSOURCE/EX
 
 2. Provide an alias of `EX32` and select the above file
 
-   ![Import trusted CA](../images/image031.png)
+   ![Import trusted CA](../images/image034.png)
 
 ---
 
@@ -42,7 +42,7 @@ The root and intermediate CAs have been saved in PEM format as file `STSOURCE/EX
 
 1. Configure the Administrator login options as shown below
 
-   ![Administrator login options](../images/image033.png)
+   ![Administrator login options](../images/image036.png)
 
 > **NOTE:** Only enable the Root CA Certificate Authority as shown.
 
@@ -52,7 +52,7 @@ The root and intermediate CAs have been saved in PEM format as file `STSOURCE/EX
 
 1. The client certificate looks like this:
 
-   ![Client certificate details](../images/image035.png)
+   ![Client certificate details](../images/image038.png)
 
    You could also see this via:
 
@@ -66,7 +66,7 @@ The root and intermediate CAs have been saved in PEM format as file `STSOURCE/EX
    CN=ST Basics Client,OU=Axway University,O=Axway,C=US
    ```
 
-   ![Administrator certificate DN](../images/image037.png)
+   ![Administrator certificate DN](../images/image040.png)
 
 > **NOTE:** We are using the **APIadmin** account for our APIs.
 
@@ -109,6 +109,6 @@ The idea here is to put sufficient load on the system so that there are events i
 
 3. Once the advanced route is triggered, you should see something like:
 
-   ![Events API output](../images/image039.png)
+   ![Events API output](../images/image042.png)
 
 ---
